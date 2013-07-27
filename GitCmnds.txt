@@ -1,0 +1,98 @@
+   29  ls -al | grep git => show .git file to connect to local and master 
+   30  git config --global user.name "NarayanMokriya"
+   31  git config --global user.name NarayanMokriya
+   33  git --version
+   34  git
+   37  cd /usr/local/git
+   39  git
+   44  git
+  126  git
+  129  git config --global user.name "NarayanMahadevan"
+  130  git config --global user.email "narayan.mahadevan@gmail.com"
+  131  git credential-osxkeychain
+  132  git config --global credential.helper osxkeychain
+  133  ssh-add ~/.ssh/github_rsa => points to the git account in ~/.ssh/
+  133  git clone https://github.com/NarayanMokriya/
+  134  git
+  142  git submodule init
+  143  git submodule update
+  153  git submodule init
+  154  git clone git@github.com:mokriya/CampusQuadAndroid.git
+  160  git submodule init
+  163  git submodule init
+  164  git submodule update
+  168  git clone git@github.com:maurycyw/StaggeredGridView.git
+  171  git submodule init
+  172  git submodule update
+  177  gits
+  178  git status
+  179  git diff project.properties 
+  180  gits
+  181  git status
+  182  git branch
+  192  gits
+  193  git status
+  194  git diff project.properties 
+  196  git status
+  236  git clone git@github.com:mokriya/CampusQuadAndroid => Cloning the Global Repository
+  237  git config --global user.email "narayan@mokriya.com" => One time activity to set the Email Credentials
+  238  git config --global user.name "NarayanMokriya" => One time activity to set the user name
+  239  git credential-osxkeychain => One time activity to set credential keychain
+  240  git config --global credential.helper osxkeychain => Checking the config for credentials
+  241  git clone git@github.com:mokriya/CampusQuadAndroid => Once Credentials are set up then cloning the Global Repositoy to local machine
+  242  git config --list
+  245  git submodule init
+  246  git submodule update
+  254  git clone git@github.com:mokriya/CampusQuadAndroid.git
+  255  git submodule init
+  257  git submodule init
+  258  git submodule update
+  322  git status => Will show the files updated in current Branch
+  323  git diff src/com/campusquad/util/Mixpanel.java
+  325  git checkout -b groups_images => Create new Brach
+  326  git branch
+  327  git merge master
+  328  git checkout master => setting the current branch to master
+  329  git branch
+  330  git status
+  331  git checkout groups_images
+  332  git branch
+  333  git add -A libs/ src/ res/ AndroidManifest.xml project.properties 
+  334  git status
+  335  git commit -m "Added Groups and Image Cropping Library"
+  335  git commit -m "fixes #74 fixed some of issues #66" => indicates closes or fixes issue #74 and comment on issue #66
+  336  git push origin groups_images
+  337  git status
+  338  git checkout master => Make master the current branch
+  339  git status
+  340  git pull
+  341  git checkout .DS_Store => Overwrite with the Master
+  342  git status
+  343  git pull => Pulls the source from Global Repository.
+  344  git checkout groups_images => Make the groups_images branch as the current branch
+  345  git merge master => Merges the current Branch with the Master
+  347  git checkout master
+  348  git submodule init => Initialize the Submodule
+  349  git submodule update => Updates the submodule from the Global Repository
+  350  git checkout groups_images
+  351  git branch => Shows the current Branch
+  352  git status
+  353  git add project.properties src/com/campusquad/activity/RegistrationActivity.java src/com/campusquad/util/img/ImageUtil.java => Add files to local repository
+  354  git commit -m "Merged the Latest" => Commits the local repository
+  355  git push origin groups_images => Pushes to the Global Repository
+  356  git add --ignore-removal <pathspec>', which is the current default,
+  ignores paths you removed from your working tree.
+  357 git add --all <pathspec>' will let you also record the removals.
+  358 git status' to check the paths you removed from your working tree.  
+  371  history | git_cmds.txt
+  372  history > git_cmds.txt
+  373  vi git_cmds.txt 
+  397  git init => initializes the local repository
+  401  git add * => Adds all files and directory to local repository
+  402  git commit -m "Created Mokriya Library" => Comits the local Repository
+  403  git remote add origin git@github.com:mokriya/MokriyaAndroidLib.git => One time Activity to add and connect with the corresponding global repository
+  404  git push -u origin master => Pushes to Global Repository
+  405  ssh -vT git@github.com
+  407  vi git_cmds.txt 
+  410  history | grep git
+  411  history | grep git > GitCmnds.txt
