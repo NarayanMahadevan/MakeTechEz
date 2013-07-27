@@ -1,0 +1,132 @@
+-: man command => display online documentation ("manual pages") for a command. e.g. man ls and q to quit
+
+:- cmnd + up arrow => To go top of the page
+
+:- cmnd + down airrow => To go end of the page
+
+:- cmnd + tab => To Switch between application
+
+-: cmd help e.g. ps help => to get more options
+
+-: clear or reset => Clean Screen
+
+-: open dir or filename => Open a file in the GUI (essentially equivalent to double-clicking the file in the finder). e.g. open .
+
+-: cd ~ => Home Directory
+
+-: cd => change directory
+
+-: cd - => go back to the previous directory
+
+-: ls => list files and directories
+
+-: ls -1 => list files and directories with details
+
+-: lsof => list the open files in the system e.g. lsof | grep /narayan | more
+
+-: mkdir => create a new directory
+
+-: cp => copy files or directories
+
+-: mv => move (rename) files or directories
+
+-: rm => remove files or directories
+
+-: whoami
+
+-: say Hello World! => Speak Hello World
+
+-: say -o audio.aiff -f Hello.txt => This will read the Hello.txt and create audio.aiff file 
+
+-: ctrl c => To Quit
+
+-: find director filename => Scan a directory structure for files matching certain criteria. e.g. find ~ -depth +1 -name Mokriya
+
+-: locate filename => Scan a database for files with a given name. Faster than find, but requires that the database be built in advance 
+
+-: sudo /usr/libexec/locate.updatedb => Switch to root (see sudo) and build/update the database.
+
+-: grep "content" "filename" => search the contents in a text file. e.g. ls -1 ~ | grep Documents
+
+-: tail -f filename and ctrl c to quit => Prints last few lines in  Text file
+
+-: more filename => Display the contents of a text file, hit spacebar to go to next screen. e.g. ps -as | more
+
+-: less filename => Display the contents of a text file. less also allows you to go backwards (type "b") in the file.
+
+-: nano filename => To open GNU Editor
+
+-: pico filename => edit the contents of a text file. 
+
+-: ln -s => To Link
+
+-: ps -ax => To get a list of every running process on your computer
+
+-: sudo => super user do
+
+-: > filename => Redirect output from a command to a file on disk. Overwrite the existing file e.g. ps -ax >processes.txt
+
+-: >> filename => append output from a command to an existing file on disk. e.g. ps -ax >>processes.txt
+-: | => Pass the output of one command to another for further processing. e.g. ps -as | more
+
+-: tee => e.g. ps -ax | tee processes.txt | more 
+   Used in the middle of a pipeline, this command allows you to both redirect output to a file, and pass it to further commands in the pipeline.
+
+-: exit => Continue the boot process (i.e. go to multi-user mode). Note that if you've made any significant changes (or started any daemons, run 
+		   SystemStarter, or anything like that), it's safer to reboot instead.
+
+-: reboot => Reboot the computer.
+
+-: shutdown -h now => Shut the computer down.
+
+-: chmod   - Change protection mode on files and folders. 
+             It's rather complex, so read the man page before using. You must own the files (or be root) to change their protections.
+	Examples:
+	chmod u+w foo => Allow the user (file owner) write access to the file or folder named "foo"
+	chmod u-r foo => Disallow the user (file owner) read access to "foo"
+	chmod ug+x foo => Allow the user (file owner) and group members execute access to "foo"
+	chmod o+rX * => Allow "other"s read and maybe execute access to all files in the current directory. The capital "X" tells chmod to use a 	
+					complicated set of rules for setting execute access only where it's appropriate; it generally works fairly well.
+	chmod o=rw foo => Allow "other"s read and write access, but disallow execute to "foo"
+	chmod -R ugo+rX ~/Documents => 
+		Allow everyone (user, group, and other) read and execute access to your Documents directory and everything in it (the -R means change permissions for the folder's entire contents, not just the folder itself)
+	chmod o-rwx ~/Public => Disallow "other"s (mainly guests) from accessing your Public directory
+
+-: Administration Commands:
+	- ps => List the processes running on the system. Examples:
+	- ps -x => List processes belonging to the current user whether or not they're attached to a terminal
+	- ps -ax => List all running processes
+	- ps -aux => List all running processes, with additional information about their resource useage
+	- top => List the top CPU-consuming processes running on the system realtime updating every sec. ctrl c or q to quit
+	- top -us5 => Updates every 5 secs
+	- kill 220 => Kill or Terminate process #220
+	- kill -9 220 => Terminate process #220 with extreme prejudice
+	- kill -HUP 220 => Send process #220 a hangup signal - by convention, background processes (daemons) treat this as a cue to restart, and reload 
+					   their configuration information.
+	- su => Set user. Allows you to temporarily become another user (root is the default). It'll ask for that user's password. Use the "exit" command 
+			to go back to normal.
+	- sudo => Set user and do. Execute a single command as another user (root is the default). It will ask for your password. Access is controlled by 
+			  a configuration file and can be made quite complex (see the man page). By default, any administrator use sudo to perform any command as any user.
+	- lsbom => List the contents of an installer's bom (bill of materials) file. This can be used to find out what files an installer will 
+			   add/replace in your system before running it. It can also be used to find out what files a past install messed with.
+	- lsof => List all files currently open by me and my processes. 
+	- sudo lsof -i => List all open network connections on the entire system.
+	- ifconfig => Configure network interfaces (e.g. ethernet ports, AirPort cards, etc).
+	- ifconfig -a => List the computer's network ports and their settings.
+	- diskutil => Provides various utilities for dealing with Apple's disk format options (HFS+, journaling, RAID, etc). 
+	- diskutil info / => List information on the boot volume.
+	- diskutil info /Volumes/Data => List information on a mounted (non-boot) volume named "Data".
+
+:- Important files:
+	- /var/db/.AppleSetupDone 
+	  => This file, simply by existing, indicates that the computer has had basic setup performed. If you delete this file, 
+		 the Setup Assistant will run on the next reboot, allowing you to create a new local admin account, re-setup networking, etc.
+	- /Library/Preferences/SystemConfiguration/ (10.3) or /var/db/SystemConfiguration/ (10.0 - 10.2) 
+	  => Despite its generic-sounding name, this directory is actually where most of the computer's network settings are stored (especially in the   
+		 file named "preferences.plist"). Moving or renaming this directory will force the OS to build a default set of network settings on the next reboot (i.e. one location named "Automatic", DHCP on all ethernet & AirPort interfaces, etc). If your network settings get hosed to the point where the computer won't boot, this is the easy way out.
+	- /Library/Logs/ and /var/log/ 
+	  => Where the log files are kept. Generally, logs relating to the core unix (Darwin) parts of the operating system can be found in /var/log/, 
+		 while the Apple-proprietary system components log to /Library/Logs/. When in doubt, look both places. And check out the main system log, /var/log/system.log -- all sorts of interesting events wind up there. 
+	- Note: old logs are often archived in gzip (compressed) format; to read these, uncompress it
+	- zcat /var/log/system.log.1.gz | more
+	  => decompress the most recent archived system log, and use more to display it one screenful at a time.
