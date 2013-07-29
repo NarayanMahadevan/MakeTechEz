@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B981B6017A5ED2400B9FDE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B981B5F17A5ED2400B9FDE9 /* UIKit.framework */; };
+		8B981B6217A5ED2400B9FDE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B981B6117A5ED2400B9FDE9 /* Foundation.framework */; };
+		8B981B6417A5ED2400B9FDE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B981B6317A5ED2400B9FDE9 /* CoreGraphics.framework */; };
+		8B981B6A17A5ED2400B9FDE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B6817A5ED2400B9FDE9 /* InfoPlist.strings */; };
+		8B981B6C17A5ED2400B9FDE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B981B6B17A5ED2400B9FDE9 /* main.m */; };
+		8B981B7017A5ED2400B9FDE9 /* MTZTableAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B981B6F17A5ED2400B9FDE9 /* MTZTableAppDelegate.m */; };
+		8B981B7217A5ED2400B9FDE9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B7117A5ED2400B9FDE9 /* Default.png */; };
+		8B981B7417A5ED2400B9FDE9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B7317A5ED2400B9FDE9 /* Default@2x.png */; };
+		8B981B7617A5ED2400B9FDE9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B7517A5ED2400B9FDE9 /* Default-568h@2x.png */; };
+		8B981B7917A5ED2400B9FDE9 /* MTZTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B981B7817A5ED2400B9FDE9 /* MTZTableViewController.m */; };
+		8B981B7C17A5ED2400B9FDE9 /* MTZTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B7A17A5ED2400B9FDE9 /* MTZTableViewController.xib */; };
+		8B981B8317A627C500B9FDE9 /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8217A627C500B9FDE9 /* creme_brelee.jpg */; };
+		8B981B9417A62AEC00B9FDE9 /* hamburger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8517A62AEC00B9FDE9 /* hamburger.jpg */; };
+		8B981B9517A62AEC00B9FDE9 /* ham_and_cheese_panini.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8617A62AEC00B9FDE9 /* ham_and_cheese_panini.jpg */; };
+		8B981B9617A62AEC00B9FDE9 /* egg_benedict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8717A62AEC00B9FDE9 /* egg_benedict.jpg */; };
+		8B981B9717A62AEC00B9FDE9 /* starbucks_coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8817A62AEC00B9FDE9 /* starbucks_coffee.jpg */; };
+		8B981B9817A62AEC00B9FDE9 /* japanese_noodle_with_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8917A62AEC00B9FDE9 /* japanese_noodle_with_pork.jpg */; };
+		8B981B9917A62AEC00B9FDE9 /* vegetable_curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8A17A62AEC00B9FDE9 /* vegetable_curry.jpg */; };
+		8B981B9A17A62AEC00B9FDE9 /* mushroom_risotto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8B17A62AEC00B9FDE9 /* mushroom_risotto.jpg */; };
+		8B981B9B17A62AEC00B9FDE9 /* angry_birds_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8C17A62AEC00B9FDE9 /* angry_birds_cake.jpg */; };
+		8B981B9C17A62AEC00B9FDE9 /* thai_shrimp_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8D17A62AEC00B9FDE9 /* thai_shrimp_cake.jpg */; };
+		8B981B9D17A62AEC00B9FDE9 /* instant_noodle_with_egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8E17A62AEC00B9FDE9 /* instant_noodle_with_egg.jpg */; };
+		8B981B9E17A62AEC00B9FDE9 /* noodle_with_bbq_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B8F17A62AEC00B9FDE9 /* noodle_with_bbq_pork.jpg */; };
+		8B981B9F17A62AEC00B9FDE9 /* white_chocolate_donut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B9017A62AEC00B9FDE9 /* white_chocolate_donut.jpg */; };
+		8B981BA017A62AEC00B9FDE9 /* full_breakfast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B9117A62AEC00B9FDE9 /* full_breakfast.jpg */; };
+		8B981BA117A62AEC00B9FDE9 /* green_tea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B9217A62AEC00B9FDE9 /* green_tea.jpg */; };
+		8B981BA217A62AEC00B9FDE9 /* ham_and_egg_sandwich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B981B9317A62AEC00B9FDE9 /* ham_and_egg_sandwich.jpg */; };
+		8B981BA417A62DC300B9FDE9 /* MTZTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B981BA317A62DC300B9FDE9 /* MTZTableCell.xib */; };
+		8B981BA717A6324100B9FDE9 /* MTZTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B981BA617A6324100B9FDE9 /* MTZTableCell.m */; };
+		8B981BA917A649EA00B9FDE9 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B981BA817A649EA00B9FDE9 /* recipes.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B981B5C17A5ED2400B9FDE9 /* 002_TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 002_TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B981B5F17A5ED2400B9FDE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8B981B6117A5ED2400B9FDE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8B981B6317A5ED2400B9FDE9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8B981B6717A5ED2400B9FDE9 /* 002_TableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "002_TableView-Info.plist"; sourceTree = "<group>"; };
+		8B981B6917A5ED2400B9FDE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8B981B6B17A5ED2400B9FDE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B981B6D17A5ED2400B9FDE9 /* 002_TableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "002_TableView-Prefix.pch"; sourceTree = "<group>"; };
+		8B981B6E17A5ED2400B9FDE9 /* MTZTableAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZTableAppDelegate.h; sourceTree = "<group>"; };
+		8B981B6F17A5ED2400B9FDE9 /* MTZTableAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZTableAppDelegate.m; sourceTree = "<group>"; };
+		8B981B7117A5ED2400B9FDE9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8B981B7317A5ED2400B9FDE9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8B981B7517A5ED2400B9FDE9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8B981B7717A5ED2400B9FDE9 /* MTZTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTZTableViewController.h; sourceTree = "<group>"; };
+		8B981B7817A5ED2400B9FDE9 /* MTZTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTZTableViewController.m; sourceTree = "<group>"; };
+		8B981B7B17A5ED2400B9FDE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MTZTableViewController.xib; sourceTree = "<group>"; };
+		8B981B8217A627C500B9FDE9 /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
+		8B981B8517A62AEC00B9FDE9 /* hamburger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamburger.jpg; sourceTree = "<group>"; };
+		8B981B8617A62AEC00B9FDE9 /* ham_and_cheese_panini.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_cheese_panini.jpg; sourceTree = "<group>"; };
+		8B981B8717A62AEC00B9FDE9 /* egg_benedict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egg_benedict.jpg; sourceTree = "<group>"; };
+		8B981B8817A62AEC00B9FDE9 /* starbucks_coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starbucks_coffee.jpg; sourceTree = "<group>"; };
+		8B981B8917A62AEC00B9FDE9 /* japanese_noodle_with_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = japanese_noodle_with_pork.jpg; sourceTree = "<group>"; };
+		8B981B8A17A62AEC00B9FDE9 /* vegetable_curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegetable_curry.jpg; sourceTree = "<group>"; };
+		8B981B8B17A62AEC00B9FDE9 /* mushroom_risotto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mushroom_risotto.jpg; sourceTree = "<group>"; };
+		8B981B8C17A62AEC00B9FDE9 /* angry_birds_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angry_birds_cake.jpg; sourceTree = "<group>"; };
+		8B981B8D17A62AEC00B9FDE9 /* thai_shrimp_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thai_shrimp_cake.jpg; sourceTree = "<group>"; };
+		8B981B8E17A62AEC00B9FDE9 /* instant_noodle_with_egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = instant_noodle_with_egg.jpg; sourceTree = "<group>"; };
+		8B981B8F17A62AEC00B9FDE9 /* noodle_with_bbq_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noodle_with_bbq_pork.jpg; sourceTree = "<group>"; };
+		8B981B9017A62AEC00B9FDE9 /* white_chocolate_donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_chocolate_donut.jpg; sourceTree = "<group>"; };
+		8B981B9117A62AEC00B9FDE9 /* full_breakfast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = full_breakfast.jpg; sourceTree = "<group>"; };
+		8B981B9217A62AEC00B9FDE9 /* green_tea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green_tea.jpg; sourceTree = "<group>"; };
+		8B981B9317A62AEC00B9FDE9 /* ham_and_egg_sandwich.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_egg_sandwich.jpg; sourceTree = "<group>"; };
+		8B981BA317A62DC300B9FDE9 /* MTZTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTZTableCell.xib; sourceTree = "<group>"; };
+		8B981BA517A6324100B9FDE9 /* MTZTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTableCell.h; sourceTree = "<group>"; };
+		8B981BA617A6324100B9FDE9 /* MTZTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTableCell.m; sourceTree = "<group>"; };
+		8B981BA817A649EA00B9FDE9 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B981B5917A5ED2400B9FDE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B981B6017A5ED2400B9FDE9 /* UIKit.framework in Frameworks */,
+				8B981B6217A5ED2400B9FDE9 /* Foundation.framework in Frameworks */,
+				8B981B6417A5ED2400B9FDE9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B981B5317A5ED2400B9FDE9 = {
+			isa = PBXGroup;
+			children = (
+				8B981B6517A5ED2400B9FDE9 /* 002_TableView */,
+				8B981B5E17A5ED2400B9FDE9 /* Frameworks */,
+				8B981B5D17A5ED2400B9FDE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B981B5D17A5ED2400B9FDE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B981B5C17A5ED2400B9FDE9 /* 002_TableView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B981B5E17A5ED2400B9FDE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B981B5F17A5ED2400B9FDE9 /* UIKit.framework */,
+				8B981B6117A5ED2400B9FDE9 /* Foundation.framework */,
+				8B981B6317A5ED2400B9FDE9 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B981B6517A5ED2400B9FDE9 /* 002_TableView */ = {
+			isa = PBXGroup;
+			children = (
+				8B981B8417A627D700B9FDE9 /* res */,
+				8B981B6E17A5ED2400B9FDE9 /* MTZTableAppDelegate.h */,
+				8B981B6F17A5ED2400B9FDE9 /* MTZTableAppDelegate.m */,
+				8B981B7717A5ED2400B9FDE9 /* MTZTableViewController.h */,
+				8B981B7817A5ED2400B9FDE9 /* MTZTableViewController.m */,
+				8B981B7A17A5ED2400B9FDE9 /* MTZTableViewController.xib */,
+				8B981B6617A5ED2400B9FDE9 /* Supporting Files */,
+				8B981BA317A62DC300B9FDE9 /* MTZTableCell.xib */,
+				8B981BA517A6324100B9FDE9 /* MTZTableCell.h */,
+				8B981BA617A6324100B9FDE9 /* MTZTableCell.m */,
+				8B981BA817A649EA00B9FDE9 /* recipes.plist */,
+			);
+			path = 002_TableView;
+			sourceTree = "<group>";
+		};
+		8B981B6617A5ED2400B9FDE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B981B6717A5ED2400B9FDE9 /* 002_TableView-Info.plist */,
+				8B981B6817A5ED2400B9FDE9 /* InfoPlist.strings */,
+				8B981B6B17A5ED2400B9FDE9 /* main.m */,
+				8B981B6D17A5ED2400B9FDE9 /* 002_TableView-Prefix.pch */,
+				8B981B7117A5ED2400B9FDE9 /* Default.png */,
+				8B981B7317A5ED2400B9FDE9 /* Default@2x.png */,
+				8B981B7517A5ED2400B9FDE9 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B981B8417A627D700B9FDE9 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				8B981B8517A62AEC00B9FDE9 /* hamburger.jpg */,
+				8B981B8617A62AEC00B9FDE9 /* ham_and_cheese_panini.jpg */,
+				8B981B8717A62AEC00B9FDE9 /* egg_benedict.jpg */,
+				8B981B8817A62AEC00B9FDE9 /* starbucks_coffee.jpg */,
+				8B981B8917A62AEC00B9FDE9 /* japanese_noodle_with_pork.jpg */,
+				8B981B8A17A62AEC00B9FDE9 /* vegetable_curry.jpg */,
+				8B981B8B17A62AEC00B9FDE9 /* mushroom_risotto.jpg */,
+				8B981B8C17A62AEC00B9FDE9 /* angry_birds_cake.jpg */,
+				8B981B8D17A62AEC00B9FDE9 /* thai_shrimp_cake.jpg */,
+				8B981B8E17A62AEC00B9FDE9 /* instant_noodle_with_egg.jpg */,
+				8B981B8F17A62AEC00B9FDE9 /* noodle_with_bbq_pork.jpg */,
+				8B981B9017A62AEC00B9FDE9 /* white_chocolate_donut.jpg */,
+				8B981B9117A62AEC00B9FDE9 /* full_breakfast.jpg */,
+				8B981B9217A62AEC00B9FDE9 /* green_tea.jpg */,
+				8B981B9317A62AEC00B9FDE9 /* ham_and_egg_sandwich.jpg */,
+				8B981B8217A627C500B9FDE9 /* creme_brelee.jpg */,
+			);
+			name = res;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B981B5B17A5ED2400B9FDE9 /* 002_TableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B981B7F17A5ED2400B9FDE9 /* Build configuration list for PBXNativeTarget "002_TableView" */;
+			buildPhases = (
+				8B981B5817A5ED2400B9FDE9 /* Sources */,
+				8B981B5917A5ED2400B9FDE9 /* Frameworks */,
+				8B981B5A17A5ED2400B9FDE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 002_TableView;
+			productName = 002_TableView;
+			productReference = 8B981B5C17A5ED2400B9FDE9 /* 002_TableView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B981B5417A5ED2400B9FDE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MTZTable;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = MakeTechEz;
+			};
+			buildConfigurationList = 8B981B5717A5ED2400B9FDE9 /* Build configuration list for PBXProject "002_TableView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8B981B5317A5ED2400B9FDE9;
+			productRefGroup = 8B981B5D17A5ED2400B9FDE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B981B5B17A5ED2400B9FDE9 /* 002_TableView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B981B5A17A5ED2400B9FDE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B981B6A17A5ED2400B9FDE9 /* InfoPlist.strings in Resources */,
+				8B981B7217A5ED2400B9FDE9 /* Default.png in Resources */,
+				8B981B7417A5ED2400B9FDE9 /* Default@2x.png in Resources */,
+				8B981B7617A5ED2400B9FDE9 /* Default-568h@2x.png in Resources */,
+				8B981B7C17A5ED2400B9FDE9 /* MTZTableViewController.xib in Resources */,
+				8B981B8317A627C500B9FDE9 /* creme_brelee.jpg in Resources */,
+				8B981B9417A62AEC00B9FDE9 /* hamburger.jpg in Resources */,
+				8B981B9517A62AEC00B9FDE9 /* ham_and_cheese_panini.jpg in Resources */,
+				8B981B9617A62AEC00B9FDE9 /* egg_benedict.jpg in Resources */,
+				8B981B9717A62AEC00B9FDE9 /* starbucks_coffee.jpg in Resources */,
+				8B981B9817A62AEC00B9FDE9 /* japanese_noodle_with_pork.jpg in Resources */,
+				8B981B9917A62AEC00B9FDE9 /* vegetable_curry.jpg in Resources */,
+				8B981B9A17A62AEC00B9FDE9 /* mushroom_risotto.jpg in Resources */,
+				8B981B9B17A62AEC00B9FDE9 /* angry_birds_cake.jpg in Resources */,
+				8B981B9C17A62AEC00B9FDE9 /* thai_shrimp_cake.jpg in Resources */,
+				8B981B9D17A62AEC00B9FDE9 /* instant_noodle_with_egg.jpg in Resources */,
+				8B981B9E17A62AEC00B9FDE9 /* noodle_with_bbq_pork.jpg in Resources */,
+				8B981B9F17A62AEC00B9FDE9 /* white_chocolate_donut.jpg in Resources */,
+				8B981BA017A62AEC00B9FDE9 /* full_breakfast.jpg in Resources */,
+				8B981BA117A62AEC00B9FDE9 /* green_tea.jpg in Resources */,
+				8B981BA217A62AEC00B9FDE9 /* ham_and_egg_sandwich.jpg in Resources */,
+				8B981BA417A62DC300B9FDE9 /* MTZTableCell.xib in Resources */,
+				8B981BA917A649EA00B9FDE9 /* recipes.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B981B5817A5ED2400B9FDE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B981B6C17A5ED2400B9FDE9 /* main.m in Sources */,
+				8B981B7017A5ED2400B9FDE9 /* MTZTableAppDelegate.m in Sources */,
+				8B981B7917A5ED2400B9FDE9 /* MTZTableViewController.m in Sources */,
+				8B981BA717A6324100B9FDE9 /* MTZTableCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8B981B6817A5ED2400B9FDE9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B981B6917A5ED2400B9FDE9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8B981B7A17A5ED2400B9FDE9 /* MTZTableViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B981B7B17A5ED2400B9FDE9 /* en */,
+			);
+			name = MTZTableViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B981B7D17A5ED2400B9FDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8B981B7E17A5ED2400B9FDE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B981B8017A5ED2400B9FDE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "002_TableView/002_TableView-Prefix.pch";
+				INFOPLIST_FILE = "002_TableView/002_TableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8B981B8117A5ED2400B9FDE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "002_TableView/002_TableView-Prefix.pch";
+				INFOPLIST_FILE = "002_TableView/002_TableView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B981B5717A5ED2400B9FDE9 /* Build configuration list for PBXProject "002_TableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B981B7D17A5ED2400B9FDE9 /* Debug */,
+				8B981B7E17A5ED2400B9FDE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B981B7F17A5ED2400B9FDE9 /* Build configuration list for PBXNativeTarget "002_TableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B981B8017A5ED2400B9FDE9 /* Debug */,
+				8B981B8117A5ED2400B9FDE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B981B5417A5ED2400B9FDE9 /* Project object */;
+}
