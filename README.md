@@ -14,7 +14,7 @@ Table of Contents
 IOS Programs
 ==================
 
-This directory repository has all sample **Working** and ** Curated** ***iOS programs**
+This directory repository has all sample **Working** and ***Curated iOS programs***
 
 <a name="hello_world" />
 Hello World
