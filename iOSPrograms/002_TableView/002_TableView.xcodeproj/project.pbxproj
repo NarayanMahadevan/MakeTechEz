@@ -37,6 +37,7 @@
 		8B981BA417A62DC300B9FDE9 /* MTZTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B981BA317A62DC300B9FDE9 /* MTZTableCell.xib */; };
 		8B981BA717A6324100B9FDE9 /* MTZTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B981BA617A6324100B9FDE9 /* MTZTableCell.m */; };
 		8B981BA917A649EA00B9FDE9 /* recipes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B981BA817A649EA00B9FDE9 /* recipes.plist */; };
+		8B9E6E4917A73D4A008317BD /* MTZViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9E6E4817A73D4A008317BD /* MTZViewUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,8 @@
 		8B981BA517A6324100B9FDE9 /* MTZTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZTableCell.h; sourceTree = "<group>"; };
 		8B981BA617A6324100B9FDE9 /* MTZTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZTableCell.m; sourceTree = "<group>"; };
 		8B981BA817A649EA00B9FDE9 /* recipes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = recipes.plist; sourceTree = "<group>"; };
+		8B9E6E4717A73D4A008317BD /* MTZViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZViewUtil.h; path = MTZUtil/MTZViewUtil.h; sourceTree = "<group>"; };
+		8B9E6E4817A73D4A008317BD /* MTZViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZViewUtil.m; path = MTZUtil/MTZViewUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,7 @@
 		8B981B6517A5ED2400B9FDE9 /* 002_TableView */ = {
 			isa = PBXGroup;
 			children = (
+				8B9E6E4617A73D30008317BD /* MTZUtil */,
 				8B981B8417A627D700B9FDE9 /* res */,
 				8B981B6E17A5ED2400B9FDE9 /* MTZTableAppDelegate.h */,
 				8B981B6F17A5ED2400B9FDE9 /* MTZTableAppDelegate.m */,
@@ -172,6 +176,15 @@
 				8B981B8217A627C500B9FDE9 /* creme_brelee.jpg */,
 			);
 			name = res;
+			sourceTree = "<group>";
+		};
+		8B9E6E4617A73D30008317BD /* MTZUtil */ = {
+			isa = PBXGroup;
+			children = (
+				8B9E6E4717A73D4A008317BD /* MTZViewUtil.h */,
+				8B9E6E4817A73D4A008317BD /* MTZViewUtil.m */,
+			);
+			name = MTZUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +276,7 @@
 				8B981B7017A5ED2400B9FDE9 /* MTZTableAppDelegate.m in Sources */,
 				8B981B7917A5ED2400B9FDE9 /* MTZTableViewController.m in Sources */,
 				8B981BA717A6324100B9FDE9 /* MTZTableCell.m in Sources */,
+				8B9E6E4917A73D4A008317BD /* MTZViewUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

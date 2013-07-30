@@ -8,6 +8,7 @@
 
 #import "MTZTableViewController.h"
 #import "MTZTableCell.h"
+#import "MTZViewUtil.h"
 
 @interface MTZTableViewController ()
 
@@ -20,6 +21,7 @@
     NSArray *tableData;
     NSArray *thumbnails;
     NSArray *prepTime;
+    MTZViewUtil *viewUtil;
 }
 
 // This is the default method that gets called when the View is loaded
@@ -46,6 +48,7 @@
     thumbnails = [dict objectForKey:@"Thumbnail"];
     prepTime = [dict objectForKey:@"PrepTime"];
     
+    viewUtil = [MTZViewUtil alloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,11 +94,35 @@
     return cell;
 }
 
-// This method is added to indicate the table height is changed to 78
+// This method is added to indicate the table height is changed to 78. This method is defined in
+// UITableViewDelegate protocol
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 78;
 }
+
+// Tells the delegate that the specified row is now selected.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    // To display a check mark when a row is selected in the accessory view
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {        
+        // Setting the Cell Accessory to none
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+        // This deselects the row with animation
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    } else {
+        // Show alert message of the selected row
+        [viewUtil showTitle:@"Row Selected" Message:[tableData objectAtIndex:indexPath.row]
+                  CancelButtonTitle:@"OK"];
+        
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+        
+}
+
 
 
 @end

@@ -21,7 +21,7 @@
 
 // UITableViewDelegate, on the other hand, deals with the appearance of the UITableView.
 // Optional methods of the protocols let you manage the height of a table row, configure section headings
-// and footers, re-order table cells, etc.
+// and footers, re-order table cells, etc. As well as, handles the row selection
 
 // In the default style of table view cell, the location and size of the thumbnail are fixed as well as
 // text to be displayed in each cell
