@@ -1,0 +1,56 @@
+//Chapter 10: Class Functions
+
+#include <iostream>
+
+using namespace std;
+
+//Global Variables
+const double pi = 3.14159;
+
+//Classes
+class boxCar{
+  public:
+		double height, width, length;
+		double volume();
+};
+
+class tankCar{
+	public:
+		double radius, length;
+		double volume();
+};
+
+class flatCar{
+	public:
+		double width, length;
+		double volume();
+};
+
+//Class Functions
+double boxCar::volume(){
+	return height * width * length;
+}
+
+double tankCar::volume(){
+	return pi*radius*radius*length;
+}
+
+double flatCar::volume(){
+	return 8.25*width*length;
+}
+
+//Main Method
+int main(){
+	//Objects
+	boxCar x;
+	tankCar y;
+	flatCar z;
+	//Setting variables
+	x.height = 10.5; x.width = 9.5; x.length = 40.0;
+	y.radius = 3.5; y.length = 40;
+	z.width = 9.5; z.length = 40.0;
+	//Printing the Volume
+	cout << "The volume of the box car is " << x.volume() << endl
+		 << "The volume of the tank car is " << y.volume() << endl
+		 << "The volume of the flat car is " << z.volume() << endl;
+}
