@@ -32,7 +32,7 @@ Multiple variables of the same data type can be declared on the same line.
 ```no-highlight
 int height, width, length;
 ```
-######Take note of the commas seperating each variable
+#####Take note of the commas seperating each variable
 Variable assignment is when a value is assinged to a varible. This can either be done when the variable is intialized,
 ```no-highlight
 int height = 11, width = 9, length = 40;
@@ -56,6 +56,24 @@ result = result * length;
 
 <a name="ArithmeticExpressions"/>
 ###Arithmetic Expressions
+C++ can do all the basic arithmetic opperation using the "+,-,*,/" operators
+```no-highlight
+6+3  	//Add
+6-3		//Subtract
+6*3		//Multiple
+6/3		//Divide
+```
+When dividng integers, the division operator does not round but truncates the quotient.
+The modulus operator "%" produces the remainder.
+```no-highlight
+5/3		//Divide, evaluates to 1
+5%3		//Divide, evalues to the remainder, 2
+```
+C++ follows traditional order of operations of Parenthesis, Multiplication/Division, Addition/Subtraction
+```
+6+3*2		//Value is 12
+(6+3)*2		//Value is 18
+```
 
 
 <a name="Inputs"/>
