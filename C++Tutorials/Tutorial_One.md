@@ -78,8 +78,19 @@ C++ follows traditional order of operations of Parenthesis, Multiplication/Divis
 
 <a name="Inputs"/>
 ###Inputs from Keyboard
-
-
+C++ has an input operator ">>". This input operator takes input from the keyboard and stores it in variables.
+```
+int height, width, length;
+cin >> height;
+cin >> width;
+cin >> length;
+```
+In this program, when three integers are inputed, the first is stored in the hieght variable, the second in width and the third in lenght.
+This code can be written in one line similir to the output operator.
+```
+int height, width, length;
+cin >> height >> width >> length;
+```
 <a name="SimpleFunctions"/>
 ###Simple Functions
 
