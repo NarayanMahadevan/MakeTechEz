@@ -104,7 +104,7 @@ This function has the name boxVolume, returns the data type int, and takes in 3 
 ```
 main(){
 	int height = 9, width = 11, length = 40;
-	cout << boxVolume(height, width, length);
+	cout boxVolume(height, width, length);
 }
 ```
 Overriding functions is when two functions with the same name are created, but with different paramters. For example:
@@ -144,3 +144,25 @@ Functions simplify programs and allows programs to reuse code.
 
 <a name="Variables"/>
 ###Local and Global Variables
+Local variables are variables that are created and used within a specific function. Once the function ends, the variable memory is cleared. 
+Global variables are variables that are created whent the program is started. They can be used throughout the program and are not limited to a specfic function. 
+```
+double pi = 3.14;
+double getVolume(int radius){
+	return 4/3 * pi *radius * radius * radius;
+}
+double returnPi(){
+	return pi;
+}
+main(){
+	int radius = 3;
+	double volume = getVolume(radius);
+	double piCopy = returnPi();
+}
+```
+In thie code, pi is a global variable. Radius is a local variable. 
+Pi can be used in multiple functions. To make this program make more sense, pi should be a constant variable so that no function can change it variable. 
+```
+const double pi = 3.14;
+```
+By typing const before double, after pi is first intialized, it can not be changed by any function. 
