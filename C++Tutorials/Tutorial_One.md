@@ -58,7 +58,7 @@ result = result * length;
 ###Arithmetic Expressions
 C++ can do all the basic arithmetic opperation using the "+,-,*,/" operators
 ```no-highlight
-6+3  	//Add
+6+3		//Add
 6-3		//Subtract
 6*3		//Multiple
 6/3		//Divide
@@ -118,6 +118,25 @@ double boxVolume(double h, double w, double l){
 	return h*w*l;
 }
 ```
+When the boxVolume function is called with 3 doubles as parameters, the second function is run. 
+
+Functions dont have to return a data type. 
+```
+void displayBoxVolume(int h, int w, int l){
+	cout << "The volume of the box car is " << h*w*l << endl;
+}
+```
+Precceding the function name with void means that it does not return any data type. The use of this type of function is seen below:
+```
+void displayBoxVolume(int h, int w, int l){
+	cout << "The volume of the box car is " << h*w*l << endl;
+}
+main(){
+	int height = 9, width = 11, length 40;
+	dispayBoxVolume(height, width, length);
+}
+```
+Functions simplify programs and allows programs to reuse code. 
 
 <a name="Abstraction"/>
 ###Procedure Abstraction
