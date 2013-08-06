@@ -93,7 +93,31 @@ cin >> height >> width >> length;
 ```
 <a name="SimpleFunctions"/>
 ###Simple Functions
+Functions is a procedure withen a progam that does the same routine everytime it is run, no matter what variables are inputed.
+An example of a function is one that computers the volume of a box given the length, width and height.
+```
+int boxVolume(int h, int w, int l){
+	return h*w*l;
+}
+```
+This function has the name boxVolume, returns the data type int, and takes in 3 integers as parameters. This function can be called in the main functions as such:
+```
+main(){
+	int height = 9, width = 11, length = 40;
+	cout << boxVolume(height, width, length);
+}
+```
+Overriding functions is when two functions with the same name are created, but with different paramters. For example:
 
+```
+int boxVolume(int h, int w, int l){
+	return h*w*l;
+}
+
+double boxVolume(double h, double w, double l){
+	return h*w*l;
+}
+```
 
 <a name="Abstraction"/>
 ###Procedure Abstraction
