@@ -1,4 +1,3 @@
-// Chapters 1-8
 #Tutorial One
 
 This tutorial is meant to teach how to complie and run C++ programs as well as create basic ones. 
@@ -13,8 +12,31 @@ This tutorial is meant to teach how to complie and run C++ programs as well as c
 [Local and Global Variables](#Variables)   
 
 <a name="CompilingAndRunning"/>
-###Compiling and Running
-
+###Compiling and Running 
+To create a C++ program, you first have to write a program using an editor. 
+Next you compile the program, translating it to machine code. 
+#####Linux Installation
+Any text editor will suffice to write a C++ program. A good one on linux operating systems is gedit. 
+After installing gedit, cd into the folder you want to create the program and type
+```
+gedit Program_Name.cpp
+```
+This created a new .cpp file using gedit in which you can create your program. 
+There are different C++ compilers on linux operating systems. A simple one is g++.
+After installing g++, cd into the flder where you created the program and type
+```
+g++ Program_Name.cpp
+```
+This will try to compile the program. If there are errors in the program, the errors will be listed in the terminal. If the program compiles, a file called a.out will be created.
+Running this file will show you what the outputs of your program are. To run this file type
+```
+./a.out
+```
+If you want to change the name of the executable file when you complie the intial program, you can enter
+```
+g++ -o ProgramName Program_Name.cpp
+```
+This will name the executable file ProgramName and create the file ProgramName.out
 
 <a name="DeclaringVariables"/>
 ###Declaring Variables
@@ -140,7 +162,9 @@ Functions simplify programs and allows programs to reuse code.
 
 <a name="Abstraction"/>
 ###Procedure Abstraction
-
+Moving computational details into a function is known as procedural abstraction. 
+The key virtue of this is that it makes programs easy to reuse. Other virtues of procedural abstraction is that is hides the computation, and it makes your program easier to debug. 
+The final benefit of procedural abstraction is it allows the programmer to change how the computation is done easily. 
 
 <a name="Variables"/>
 ###Local and Global Variables
