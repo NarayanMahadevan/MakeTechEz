@@ -7,7 +7,6 @@ This tutorial is meant to teach the basics of classes.
 [Explaining Member Functions](#MemberFunctions)   
 [Explaining Constructor Member Functions](#Constructors)   
 [Explaining Reader and Writer Member Functions](#ReaderAndWriter)   
-[Data Abstraction](#Abstraction)   
 
 <a name="ClassesAndObjects"/>
 ###Creating Classes and Objects
@@ -139,6 +138,4 @@ The same syntax can be used to call member functions as well as the writer funct
 ```
 
 
-<a name="Abstraction"/>
-###Data Abstraction
 
