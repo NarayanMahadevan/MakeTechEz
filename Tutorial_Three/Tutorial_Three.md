@@ -90,6 +90,8 @@ There are several principles on how to design classes and class hierarchies.
 	Example:In the above program, there are natural catagories corresponding to the various sort of cars and containers
 2.No-duplication principle-Variables and functions should be distributed among class definitions to make sure there is no duplication of identical code.
 	Example:In the abomve program, length, width, and height are member variables and the volume member function are in the box class not in the boxCar oand gondolaCar classes.
-3.
+3.Look-it-up principle-A program should look up a frequently needed answer, rather then computing that answer. 
+4.Keep-it-simple principle-If a program or function becomes to complex, break it into smaller functions so it is easier to debug and maintain. 
+5.Modularity principle-Dvide large programs into logically coherent modules, each of which occupies its own file. 
 	
 
