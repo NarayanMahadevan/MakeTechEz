@@ -7,6 +7,7 @@ This tutorial is meant to teach the basics of classes.
 [Explaining Member Functions](#MemberFunctions)   
 [Explaining Constructor Member Functions](#Constructors)   
 [Explaining Reader and Writer Member Functions](#ReaderAndWriter)   
+[Practice Problems](#Practice)   
 
 <a name="ClassesAndObjects"/>
 ###Creating Classes and Objects
@@ -138,4 +139,7 @@ The same syntax can be used to call member functions as well as the writer funct
 ```
 
 
+<a name="Practice"/>
+###Practice Problem
+Define a flatCar class with private member variables, a public volume member function, a default constructor, a constructor with two parameters, and reader and writer functions.The volume of a flat car is 8.25*width*length.
 
