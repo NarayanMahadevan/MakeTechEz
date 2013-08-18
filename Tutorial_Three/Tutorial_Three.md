@@ -4,6 +4,7 @@ This tutorial is about class inheritance.
 
 [Inheritance](#Inheritance)   
 [Designing Classes and Class Heirarchies](#Design)   
+[Practice Problem](#Practice)   
 
 <a name="Inheritance"/>
 ###Inheritance
@@ -93,5 +94,10 @@ There are several principles on how to design classes and class hierarchies.
 3.Look-it-up principle-A program should look up a frequently needed answer, rather then computing that answer.   
 4.Keep-it-simple principle-If a program or function becomes to complex, break it into smaller functions so it is easier to debug and maintain.   
 5.Modularity principle-Dvide large programs into logically coherent modules, each of which occupies its own file.   
-	
+
+<a name="Practice"/>
+###Practice Problem
+1.Tie the flatCar class created in the previous tutorial into the above hierarchy.   
+2.Create a sphere class that is a container. Include appropiate member variables, constructors and functions.   
+3.Create a liquidGasCar class that is a sphere and a railroadCar. A liquidGasCar contains either two or three spheres of gas. Make sure to not duplicate code. 
 
