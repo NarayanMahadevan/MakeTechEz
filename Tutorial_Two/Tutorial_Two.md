@@ -141,5 +141,6 @@ The same syntax can be used to call member functions as well as the writer funct
 
 <a name="Practice"/>
 ###Practice Problem
-Define a flatCar class with private member variables, a public volume member function, a default constructor, a constructor with two parameters, and reader and writer functions.The volume of a flat car is 8.25*width*length.
+Define a tankCar class with private member variables raidus and height, a public volume member function, a default constructor, a constructor with two parameters, and reader and writer functions. The volume of a tank car is pi*radius^2*height   
+Define a flatCar class with private member variables length and width, a public volume member function, a default constructor, a constructor with two parameters, and reader and writer functions.The volume of a flat car is 8.25*width*length.
 
