@@ -23,20 +23,20 @@ The input-output library allows you to use the "<<" and the ">>" operator. The "
 
 <a name="Variables"/>
 ###Declaring Variables
-Variables is an identifier that serves as a name for a chunk of computer memory. 
-Data types determine the size of the chunk that the variable refers too as well as how the data is interpreted.
-This chunk of memory holds the variables value.
-A variables is declared by preceding the name of the variable with the data type.   
-An example is __int height__
-The above variable height is an integer because its name is preceded by the data-type-declaring int.
-Multiple variables of the same data type can be declared on the same line. 
+Variables is an identifier that serves as a name for a chunk of computer memory.   
+Data types determine the size of the chunk that the variable refers too as well as how the data is interpreted.   
+This chunk of memory holds the variables value.   
+A variables is declared by preceding the name of the variable with the data type.      
+An example is __int height__    
+The above variable height is an integer because its name is preceded by the data-type-declaring int.   
+Multiple variables of the same data type can be declared on the same line.   
 __int height, width, length;__
-#####Take note of the commas seperating each variable
-Variable assignment is when a value is assinged to a varible. This can either be done when the variable is intialized,
-__int height = 11, width = 9, length = 40;__
-or after it has been created. 
-__int height; height = 11__
-Variable values can be changed after they have been assigned using the assignment opperator "="
+####Take note of the commas seperating each variable
+Variable assignment is when a value is assinged to a varible. This can either be done when the variable is intialized,   
+__int height = 11, width = 9, length = 40;__   
+or after it has been created.    
+__int height; height = 11__   
+Variable values can be changed after they have been assigned using the assignment opperator "="    
 
 <a name="SimpleFunctions"/>
 ###Simple Functions
@@ -68,12 +68,11 @@ void displayBoxCarVolume(double h, double w, double l){
 }
 ```
 Precceding the function name with void means that it does not return any data type.   
-Functions simplify programs and allows programs to reuse code. 
-Note that all the variables in the above code are local variables. 
-Local variables are variables that are created and used within a specific function. Once the function ends, the variable memory is cleared. 
-Global variables are variables that are created whent the program is started. They can be used throughout the program and are not limited to a specfic function. 
-A Global Variables is declared outside of any function. 
-
+Functions simplify programs and allows programs to reuse code.   
+Note that all the variables in the above code are local variables.    
+Local variables are variables that are created and used within a specific function. Once the function ends, the variable memory is cleared.   
+Global variables are variables that are created whent the program is started. They can be used throughout the program and are not limited to a specfic function.   
+A Global Variables is declared outside of any function.   
 <a name="Abstraction"/>
 ###Procedure Abstraction
 Moving computational details into a function is known as procedural abstraction.    
