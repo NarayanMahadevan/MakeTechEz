@@ -1,6 +1,3 @@
-//Chapter 15: Protect Member Variables
-
-
 #include <iostream>
 
 using namespace std;
@@ -43,6 +40,15 @@ class cylinder : public container{
 		double volume(){ return pi*radius*radius*length;}
 };
 
+class sphere : public container{
+	public:
+		double radius;
+		//Default constructor
+		sphere(){}
+		//Functions
+		double volume(){return (4/3)*pi*radius*radius*radius; }
+};
+
 class boxCar : public railroadCar, public box{
 	public:
 		//Default constructor
@@ -55,6 +61,14 @@ class tankCar : public railroadCar, public cylinder{
 		tankCar(){radius = 3.5; length = 40.0; }		
 };
 
+class flatCar : public railroadCar, public box{
+	public:
+		//Default constructor
+		flatCar(){width = 9.5; length = 40.0; }
+		//Overriding the volume function
+		double volume() {return 8.25 * width * length; }
+};
+
 class gondalaCar : public railroadCar, public box{
 	public:
 		//Default constructor
@@ -63,6 +77,13 @@ class gondalaCar : public railroadCar, public box{
 		double volume() {return 1.2 * height * width * length; }
 };
 
+class liquidgasCar : public railroadCar, public sphere{
+	public:
+		//Default constructor
+		liquidgasCar(){numberOfContainers = 2; radius = 3.5; }
+		//Variables
+		int numberOfContainers;
+};
 //Main Method
 int main(){
 	//Objects using constructors
