@@ -54,26 +54,36 @@ In the above code, the conditional statement has three blocks. The first is the 
 This is the generic format of any if conditional statement. The _else if_ and _else_ block are not needed to complete the conditional statement. Also there can be more then one _else if_ statements if needed.   
 If-statements can be nested in each other. For example
 ```
-	if(temp < 25){
-		cout << "It is too cold << endl;
-		if(temp > 0){
-			cout << "At least it is not freezing << endl;
+	if(temp >= 25){
+		if(temp <= 50){
+			cout << "The temperature is perfect" << endl;
 		}else{
-			cout << It is freezing << endl;
+			cout << "the temperature is not perfect" << endl;
 		}
-	}else if(temp > 50){
-		cout << "It is too warm" << endl;
-		if(temp < 100){
-			cout << "At least it is not boiling << endl;
-		}else{
-			cout << "It is boiling << endl;
-		}
+	}else{
+		cout << "The temperature is not perfect" << endl;
 	}
 ```
 In the above code, the inner if-statements are the embedded statements of the outer if-statements. Thus they are only used when the boolean expression returns true.   
 One of the most important parts of writing conditional statements is to keep them non-redundent and simple. The more complex and redundent series of conditional statements are, the more likely a bug will appear in the code.   
 By keeping the statements non-redundent and simple, it is easier to debug as well as update the code. 
-One way to keep statments simple is to combine them using the __and operator, &&__ and the __or operator, ||__.
-
+One way to keep statments simple is to combine them using the __and operator, &&__ and the __or operator, ||__.   
+The and operator returns _true_ when both its operands are _true_.   
+The or operator returns _true_ if one of its operands are _true_.   
+The above code can be simplified and become less redundent using these operators.
+```
+	if(temp >= 25 && temp <= 50){
+		cout << "The temperature is perfect" << endl;
+	}else{
+		cout << "The temperature is not perfect" << endl;
+	}
+```
+This could also be written using the or operator 
+__if(temp < 25 || temp < 50){__
+	__cout << "The temperature is not perfect" << endl;__
+__}else{__
+	__cout << "The temperature is perfect" << endl;__
+Both pieces of code do the same thing, and both are better then the original. 
+	
 
 	
