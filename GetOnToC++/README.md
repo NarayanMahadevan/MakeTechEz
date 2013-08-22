@@ -49,6 +49,7 @@ Before you start programming in C++, it is important you have the environment to
 1. Type the C++ program i.e. Text Editor and 
 2. The compiler to compile and run the C++ Program 
 
+<a name="editor"/></a>
 ###Text Editor
 #  
 This will be used to type your program. Examples of few editors include Windows Notepad, OS Edit command, Brief, Epsilon, EMACS, and vim or vi. 
@@ -142,7 +143,7 @@ Through all this steps the program is building a simple but realistic live proje
 Let us look at a simple code that would print the words Hello World on the console.
 
 	//
-	//  helloworld.cpp
+	//  hello.cpp
 	//
 	//  Created by MakeTechEz on 18/08/13.
 	//  Copyright (c) 2013 MakeTechEz. All rights reserved.
@@ -173,4 +174,35 @@ Let us look at a simple code that would print the words Hello World on the conso
 <a name="execute"/></a>
 ## Compile and Run Helloworld Program
 #  
-Before you start programming in C++, it is important you have the environment to 
+
+![C++ Compile and Run Flow Chart](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/C++CompileAndRunFlow.png) 
+
+**Step 1:** Write the program hello.cpp using any Text Editor 
+
+**Step 2:** Compile the program, translating it into machine instructions. In its 
+original form, the program is text or source code. Once translated, the source code becomes Object Code. If there are any Compilation error, fix the code and again compile the program. There are 2 Methods to compile.  
+
+**Method 1:**
+
+	$ g++ hello.cpp -o hello
+
+This command compiles hello.cpp directly into an executable program named "hello" that can be run by typing 'hello' at the command line.
+
+**Method 2:**
+
+	$ g++ -c hello.cpp
+
+The command transaltes the source code hello.cpp to hello.o object code file.  This is the advantage of the Method 2, in that only the changed files can be compiled to its corresponsing object code file. 
+
+**Step 3:** Its applicable to Method 2 where in all the Object Code file can be linked to produce executable code. Here hello.o is linked to produce hello executable program. For more information refer [Compiling C++ * Program link](http://pages.cs.wisc.edu/~beechung/ref/gcc-intro.html).
+  
+```
+$ g++ hello.o -o hello
+```
+**Step 4:** Finally, run the executable code
+
+```
+$ ./hello
+Hello World
+```
+
