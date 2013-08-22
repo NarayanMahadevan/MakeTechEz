@@ -8,7 +8,9 @@
 
 #import "MTZTableViewController.h"
 #import "MTZTableCell.h"
-#import "MTZViewUtil.h"
+#import <MTZUtility/MTZUtility.h>
+#import <MTZUtility/MTZViewUtil.h>
+#import <MTZUtility/MTZUtil.h>
 
 @interface MTZTableViewController ()
 
@@ -39,11 +41,8 @@
     // Initialize Preparation Time
     prepTime = [NSArray arrayWithObjects:@"30 min", @"30 min", @"20 min", @"30 min", @"10 min", @"1 hour", @"45 min", @"5 min", @"30 min", @"8 min", @"20 min", @"20 min", @"5 min", @"1.5 hour", @"4 hours", @"10 min", nil];
     
-    // Find out the path of recipes.plist
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"recipes" ofType:@"plist"];
-    
-    // Load the file content and read the data into arrays
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    // Find the Path of recipes.plist and Load the file content and read the data into arrays
+    NSDictionary *dict = [MTZUtil loadPList:@"recipes"];
     tableData = [dict objectForKey:@"RecipeName"];
     thumbnails = [dict objectForKey:@"Thumbnail"];
     prepTime = [dict objectForKey:@"PrepTime"];
@@ -104,7 +103,7 @@
 // Tells the delegate that the specified row is now selected.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [MTZUtil logMethod:__FUNCTION__ Value:indexPath];
     // To display a check mark when a row is selected in the accessory view
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {        

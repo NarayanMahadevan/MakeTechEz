@@ -7,6 +7,7 @@
 //
 
 #import "MTZViewUtil.h"
+#import <UIKit/UIKit.h>
 
 
 @implementation MTZViewUtil
@@ -14,12 +15,12 @@
 -(IBAction)showTitle:(NSString*) title
              Message:(NSString*) message CancelButtonTitle:(NSString*) buttonTitle
 {
-    UIAlertView *helloWorldAlert = [[UIAlertView alloc]
+    UIAlertView *alert = [[UIAlertView alloc]
                                     initWithTitle:title message:message delegate:nil
                                     cancelButtonTitle:buttonTitle  otherButtonTitles:nil];
     
     // Display the Hello World Message
-    [helloWorldAlert show];
+    [alert show];
 }
 
 @end

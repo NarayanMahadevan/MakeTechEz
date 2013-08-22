@@ -7,6 +7,7 @@
 //
 
 #import "MTZViewUtil.h"
+#import <UIKit/UIKit.h>
 
 
 @implementation MTZViewUtil

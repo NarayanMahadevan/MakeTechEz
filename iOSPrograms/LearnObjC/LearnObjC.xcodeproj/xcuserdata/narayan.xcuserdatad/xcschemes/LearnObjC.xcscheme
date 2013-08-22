@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8BFC793B17A49F8A0075D466"
-               BuildableName = "001_HelloWorld.app"
-               BlueprintName = "001_HelloWorld"
-               ReferencedContainer = "container:001_HelloWorld.xcodeproj">
+               BlueprintIdentifier = "8B000A9017BCEB6D007118BB"
+               BuildableName = "LearnObjC"
+               BlueprintName = "LearnObjC"
+               ReferencedContainer = "container:LearnObjC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8BFC793B17A49F8A0075D466"
-            BuildableName = "001_HelloWorld.app"
-            BlueprintName = "001_HelloWorld"
-            ReferencedContainer = "container:001_HelloWorld.xcodeproj">
+            BlueprintIdentifier = "8B000A9017BCEB6D007118BB"
+            BuildableName = "LearnObjC"
+            BlueprintName = "LearnObjC"
+            ReferencedContainer = "container:LearnObjC.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8BFC793B17A49F8A0075D466"
-            BuildableName = "001_HelloWorld.app"
-            BlueprintName = "001_HelloWorld"
-            ReferencedContainer = "container:001_HelloWorld.xcodeproj">
+            BlueprintIdentifier = "8B000A9017BCEB6D007118BB"
+            BuildableName = "LearnObjC"
+            BlueprintName = "LearnObjC"
+            ReferencedContainer = "container:LearnObjC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8BFC793B17A49F8A0075D466"
-            BuildableName = "001_HelloWorld.app"
-            BlueprintName = "001_HelloWorld"
-            ReferencedContainer = "container:001_HelloWorld.xcodeproj">
+            BlueprintIdentifier = "8B000A9017BCEB6D007118BB"
+            BuildableName = "LearnObjC"
+            BlueprintName = "LearnObjC"
+            ReferencedContainer = "container:LearnObjC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
