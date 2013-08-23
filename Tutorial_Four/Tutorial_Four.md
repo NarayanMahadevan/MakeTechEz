@@ -2,6 +2,7 @@
 
 [Numerical Predicates](#Predicates)   
 [One-Way and Two-Way Conditional Statements](#ConditionalStatements)   
+[Iteration Statements](#Iteration)   
 
 <a name="Predicates"/>
 ###Predicates
@@ -41,6 +42,7 @@ An example of one such program would be a program that displayed a message depen
 #include <iostream>
 int main(){
 	int temp;
+	cout << "BASIC CONDITIONAL STATEMENT" << endl;
 	cin >> temp;
 	if(temp < 25){
 		cout << "It is too cold << endl;
@@ -54,6 +56,7 @@ In the above code, the conditional statement has three blocks. The first is the 
 This is the generic format of any if conditional statement. The _else if_ and _else_ block are not needed to complete the conditional statement. Also there can be more then one _else if_ statements if needed.   
 If-statements can be nested in each other. For example
 ```
+	cout << "NESTED CONDITIONAL STATEMENTS" << endl;
 	if(temp >= 25){
 		if(temp <= 50){
 			cout << "The temperature is perfect" << endl;
@@ -72,18 +75,28 @@ The and operator returns _true_ when both its operands are _true_.
 The or operator returns _true_ if one of its operands are _true_.   
 The above code can be simplified and become less redundent using these operators.
 ```
+	cout << "CONDITIONAL STATEMENTS WITH THE AND OPERATOR" << endl;
 	if(temp >= 25 && temp <= 50){
 		cout << "The temperature is perfect" << endl;
 	}else{
 		cout << "The temperature is not perfect" << endl;
 	}
 ```
-This could also be written using the or operator 
-__if(temp < 25 || temp < 50){__
-	__cout << "The temperature is not perfect" << endl;__
-__}else{__
-	__cout << "The temperature is perfect" << endl;__
-Both pieces of code do the same thing, and both are better then the original. 
+This could also be written using the or operator:
+```
+	cout << "CONDITIONAL STATEMENTS WITH THE OR OPERATOR" << endl;
+	if(temp < 25 || temp < 50){
+		cout << "The temperature is not perfect" << endl;
+	}else{ 
+		cout << "The temperature is perfect" << endl; 
+```
+Both pieces of code do the same thing, and both are better then the original because they are simplier and less redundent. 
+Conditional statements are extremly important and useful part of the C++ language.
+
+<a name="Iteration"/>
+
+
+
 	
 
 	
