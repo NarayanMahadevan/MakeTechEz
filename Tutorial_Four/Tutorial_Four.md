@@ -94,9 +94,64 @@ Both pieces of code do the same thing, and both are better then the original bec
 Conditional statements are extremly important and useful part of the C++ language.
 
 <a name="Iteration"/>
+###Iteration Statements
+An __iteration statement__ enables functions to do computations over and over again until a test has been satisfied.   
+There are two basic iteration statements in the C++ language. The first is the __while-loop__.   
+The while-loop consistes of a boolean expression in parentheses, followed by an embedded statement.   
+__while(boolean expression){__   
+__embedded statement__    
+__}__   
+Suppose, for example, you wanted to increase or decrease the temperature by one degree at a time of a train car if it is not perfect. A while loop is a perfect way of doing this. 
+```
+	cout << "WHILE LOOP" << endl;
+	if(temp < 25){
+		cout << "It is too cold << endl;
+		int counter = temp;
+		while(counter <=25){
+			counter++;
+			cout << "The temperature has been increased to " << counter << " degrees" << endl;
+		}
+		cout << "The temperature is now perfect";
+	}else if(temp > 50){
+		cout << "It is too warm << endl;
+		int counter = temp;
+		while(counter >= 50){
+			counter--;
+			cout << "The temperature has been decreased to " << temp << " degrees" << endl;
+		}
+		cout << "The temperature is now perfect";
+	}else{
+		cout << "The temperature is perfect" << endl;
+	}
+```
+In the above code, the temperature is checked as to whether or not is perfect. If it is not, it is either decreased or increased using a while loop.   
+Make sure that in the boolean expression eventually become false. In the above code, by increamenting/decrementing the temperature, the boolean expression used to start the while loop eventually is false and the loops breaks. If the boolean expression is always true, the loop will never end.   
+In an event that the loop never ends, you can exit out of the program using control-c.   
+The second iteration statement is the __for-loop__.   
+The for-loop is a more concise version of the while -loop. It consistes of an entry expression, a boolean expression, and a continuation expression in paranthesis followed by a an embedded statement.    
+__for(entry expression; boolean expression; continuation expression){__   
+__embedded statement__   
+__}__   
+The entry expression is only evaluted once, when the for loop is entered. Once the entry expression is evaluated, the boolean expression is evaluated. If the boolean expression is true, then the embedded expression is evaluated, followed by the continuation expression.   
+The above code can be defined using a for loop. 
+```	
+	cout << "FOR LOOP" << endl;
+	if(temp < 25){
+		cout << "It is too cold << endl;
+		for(int counter = temp; counter < 25; ++counter)
+			cout << "The temperature has been increased to " << counter << " degrees" << endl;
+		}
+		cout << "The temperature is now perfect";
+	}else if(temp > 50){
+		cout << "It is too warm << endl;
+		for(int coutner = temp; counter >50; --counter)
+			cout << "The temperature has been decreased to " << counter << " degrees" << endl;
+		}
+		cout << "The temperature is now perfect";
+	}else{
+		cout << "The temperature is perfect" << endl;
+	}
+```
 
-
-
-	
 
 	
