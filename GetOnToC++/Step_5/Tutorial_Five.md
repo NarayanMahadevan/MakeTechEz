@@ -40,6 +40,8 @@ Recurssion is hard to visualize, so lets take this program above step by step wh
 - rabbits(5) = rabbits(1) + rabbits(0) + 1 + 1 + 1 + 1 + 1 +1
 - rabbits(5) = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 8.
 
+Both versions of the program accomplish the same goal, however the first does it in less steps and is easier to understand. This does not mean that 
+
 These are the steps the program takes when rabbits(5) is called. The base case stops the reccursion from continueing by return 1 instead of a function call. 
 Recursion provides elegant solutions for complicated solutions, however it does have its downsides. 
 - Recusion produces slower programs due to the number of function calls needed. 
@@ -84,3 +86,5 @@ Note that writting the program this way is still a type of recursion. Recursion 
 - rabbit(5) = previousMonth(2) + penultimateMonth(2) + 1 + 1 + 1 + 1 + 1 + 1
 - rabbit(5) = rabbit(1) + rabbit(0) + 1 + 1 + 1 + 1 + 1 +1
 - rabbit(5) = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 8.
+
+Both versions of the program accomplish the same goal, however the first does it in less steps and is easier to understand. This does not mean that using auxillary functions is bad. There are problems that need the usage of auxillary functions to do simply, this example is just not one of them. 
