@@ -67,7 +67,7 @@ A prototypes is just the declaration of the function. It is not definined. No co
 with the prototype written, the two auxiallry functions will work as well as the definition of the rabbit function. 
 ```
 int previousMonth(int n){return rabbit(n-1);}
-int penultimateMonth(int n)P{return rabbit(n-2);}
+int penultimateMonth(int n){return rabbit(n-2);}
 int rabbit(int n){
 	if(n==0 || n==1){
 		return 1;
@@ -88,3 +88,20 @@ Note that writting the program this way is still a type of recursion. Recursion 
 - rabbit(5) = 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 8.
 
 Both versions of the program accomplish the same goal, however the first does it in less steps and is easier to understand. This does not mean that using auxillary functions is bad. There are problems that need the usage of auxillary functions to do simply, this example is just not one of them. 
+It is simple to see that these two functions do the same thing by running them side by side using the following main function. 
+```
+int main(){
+	cout << "FIRST PROGRAM" << endl
+		 << "At the end of month 1, there is " << rabbits(1) << endl
+		 << "At the end of month 2, there are " << rabbits(2) << endl
+		 << "At the end of month 3, there are " << rabbits(3) << endl
+		 << "At the end of month 4, there are " << rabbits(4) << endl
+		 << "At the end of month 5, there are " << rabbits(5) << endl
+		 << "SECOND PROGRAM" << endl 
+		 << "At the end of month 1, there is " << rabbit(1) << endl
+		 << "At the end of month 2, there are " << rabbit(2) << endl
+		 << "At the end of month 3, there are " << rabbit(3) << endl
+		 << "At the end of month 4, there are " << rabbit(4) << endl
+		 << "At the end of month 5, there are " << rabbit(5) << endl;
+}	 
+```
