@@ -1,7 +1,7 @@
 #Recursion and Function Prototypes
 
 [Recursion](#Recursion)   
-[Function Prototypes](#Prototype)   
+[Function Prototypes](#Prototypes)   
 
 
 <a name="Recursion"/>
