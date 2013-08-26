@@ -1,6 +1,7 @@
 #Recursion and Function Prototypes
 
-["Recursion"](#Recursion)   
+[Recursion](#Recursion)   
+[Function Prototypes](#Prototype)   
 
 
 <a name="Recursion"/>
@@ -50,6 +51,7 @@ Recursion provides elegant solutions for complicated solutions, however it does 
 These problems can be worked around by creating different compilers, however this is not done with C++.
 
 <a name="Prototypes"/>
+###Function Prototypes
 C++ ordinarily requires the definition of a function to be written before it is called. For basic programs, this is an easy rule to follow, however sometimes functions call upon other functions.   
 To solve the ordering problem of what order the functions have to be defined in, functions prototypes must be used.   
 To see the need of function prototypes, the above problem of finding the number of female rabbits in a given month using two auxiliary functions instead of recursion.   
