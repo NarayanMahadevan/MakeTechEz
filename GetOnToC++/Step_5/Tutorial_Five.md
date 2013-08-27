@@ -111,7 +111,7 @@ int main(){
 <a name="Practice"/>
 ###Practice
 1.Write a recursive function that takes two positive integers and calculates m^n   
-2.Write a recursive function that takes one positive integer and calculates n! where n! = _n*(n-1)*(n-2)*...*1_
+2.Write a recursive function that takes one positive integer and calculates n! where n! = _n*(n-1)*(n-2)*...*1_   
 3.Convert the function is problem two, to a program consisting of three cooperating functions, _factorial_, _base_, and _recurse_.   
 The function should look like this:   
 __int factorial(n){__   
