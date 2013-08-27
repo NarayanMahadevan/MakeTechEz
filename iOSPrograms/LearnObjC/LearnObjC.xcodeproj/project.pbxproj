@@ -12,6 +12,7 @@
 		8B000A9C17BCEB6D007118BB /* LearnObjC.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8B000A9B17BCEB6D007118BB /* LearnObjC.1 */; };
 		8B000AA417BF437A007118BB /* StringUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B000AA317BF437A007118BB /* StringUtil.m */; };
 		8B000AA717C1117E007118BB /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B000AA617C1117E007118BB /* Dog.m */; };
+		8BA10EC917C99F6500680877 /* NewDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA10EC817C99F6500680877 /* NewDog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		8B000AA317BF437A007118BB /* StringUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtil.m; sourceTree = "<group>"; };
 		8B000AA517C1117E007118BB /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		8B000AA617C1117E007118BB /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		8BA10EC717C99F6500680877 /* NewDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDog.h; sourceTree = "<group>"; };
+		8BA10EC817C99F6500680877 /* NewDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				8B000AA317BF437A007118BB /* StringUtil.m */,
 				8B000AA517C1117E007118BB /* Dog.h */,
 				8B000AA617C1117E007118BB /* Dog.m */,
+				8BA10EC717C99F6500680877 /* NewDog.h */,
+				8BA10EC817C99F6500680877 /* NewDog.m */,
 			);
 			path = LearnObjC;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				8B000A9817BCEB6D007118BB /* main.m in Sources */,
 				8B000AA417BF437A007118BB /* StringUtil.m in Sources */,
 				8B000AA717C1117E007118BB /* Dog.m in Sources */,
+				8BA10EC917C99F6500680877 /* NewDog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

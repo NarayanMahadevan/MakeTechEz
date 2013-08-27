@@ -10,4 +10,15 @@
 
 @implementation NewDog
 
+@synthesize name = mName;
+
+- (NSString*) name {
+    return mName;
+}
+
+- (void) setName: (NSString*) aName {
+    mName = aName;
+}
+
+
 @end

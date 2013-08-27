@@ -9,5 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface NewDog : NSObject
+{
+    NSString* name;
+}
+
+- (NSString*) name;
+- (void) setName: (NSString*) aName;
+
+@property (nonatomic, strong) NSString* name;
 
 @end

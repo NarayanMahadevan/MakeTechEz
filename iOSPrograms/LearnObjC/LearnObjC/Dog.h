@@ -21,27 +21,28 @@
 @interface Dog : NSObject
 {
     // Instance Variables
-    NSString* mName;
-    NSString* mBreed;
-    NSString* mColor;
+    NSString* name;
+    NSString* breed;
+    NSString* color;
 }
 
 // Accessor Methods
 
 // getter methods
-- (NSString*) mName;
-- (NSString*) mBreed;
-- (NSString*) mColor;
+- (NSString*) name;
+- (NSString*) breed;
+- (NSString*) color;
 
 // setter methods
-- (void) setMName: (NSString*) name;
-- (void) setMBreed: (NSString*) breed;
-- (void) setMColor: (NSString*) color;
+- (void) setName: (NSString*) aName;
+- (void) setBreed: (NSString*) aBreed;
+- (void) setColor: (NSString*) aColor;
 
-@property (retain) NSString* mName;
-@property (retain) NSString* mBreed;
-@property (retain) NSString* mColor;
+@property (nonatomic, strong) NSString* name;
+@property (nonatomic, strong) NSString* breed;
+@property (nonatomic, strong) NSString* color;
+@property (nonatomic, strong) NSNumber* age;
 
--(id)initWithName:(NSString*)aName Breed:(NSString*)breed AndColor:(NSString*) color;
+-(id)initWithName:(NSString*)aName Breed:(NSString*)aBreed Color:(NSString*)aColor AndAge:(NSNumber*)aAge;
 
 @end
