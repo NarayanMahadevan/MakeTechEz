@@ -6,30 +6,28 @@ The purpose of this **Get On To C++** tutorials is to help you learn the essenti
 
 1. Learning and being a **Confident C++ programmer** is a simple **18 Step Process** which can be completed in flat **2 - 4 weeks** time.
 
-2. Every Step introduces concepts and demonstrates the concept with a **sample code**. 
+2. Every Step introduces concepts and demonstrates the concept with a **sample code**. This sample code when put together develops into a deliverable live project.
 
 3. We encourage you to cut and paste this sample code into youe editor. All the sample code combines into one **C++ Program** which you can run and execute.
 
-2. Each step results into one C++ program that you would have build compiled and executed at the same time this programs are realistic 
+2. Each step results into one realistic C++ program that you have built, compiled and executed.
 
-3. The emphasis of Get On Series is **Programming** and learning the language then reading lot of theories.
+3. The emphasis of Get On Series is on **Programming** and learning the language rather than reading a lot of theories.
 
 4. Finally as you go through the step this will lead to a **C++ Project** that reads information from a file describing a railroad train, computes the load-bearing volume of each box car and tank car using formulas drawn from descriptions of boxes and cylinders, and displays a car-by-car report.   
 
-5. Whats most **Important** is in the end you will be a **Confident Developer of C++ Language having written some 20+ complex real-world C++ program.**
+5. Whats most **Important** is in the end you will be a **Confident Developer of C++ Language having written some 20+ complex real-world C++ programs.**
 
 ## Certification Program
 #  
-Certification Program is a paid program and serves multiple purposes
+Certification Program (comming soon) is a paid program and serves multiple purposes
 
-- Certfies you has a **Developer of C++** because of the following 
-  - The certification program will ensure that for every step you have written the sample program and the practise program and that the C++ program is executed and working correctly.
-  - For every step once the program is written successfully, you will be required to answer bunch of questions before you can proceed to the next step.
-  - You will follow the same process for each of the 18 steps to finally build up a Certified C++ Project. The Scores from the Questionnaire on each step will be combined to give you a final score
-
-- Once you are Certified Developer of C++, based on your score, you can select 5 companies of your choice who are in lookout for Certified C++ Developers and **Apply for Job**. 
-
-- This is a recognized **Certification Program** by the industry and your certification will give them confidence that no training is required and you will be productive in work from day one.
+- Certfies you as a **Developer of C++** 
+- The certification program will ensure that for every step you have written the sample program and the practice program and that the C++ program is executed and working correctly.
+- For every step once the program is written successfully, you will be required to answer questions before you can proceed to the next step.
+- You will follow the same process for each of the 18 steps to finally build up a Certified C++ Project. The Scores from the Questionnaire on each step will be combined to give you a final score
+- Once you are Certified Developer of C++, based on your score, you can select 5 companies of your choice who are in lookout for C++ Developers and **Apply for Job**. 
+- This is a recognized **Certification Program** by the industry and your certification will give the company confidence on your programming skills.
 
 ## Inroduction
 #  
@@ -71,7 +69,7 @@ Most frequently used and free available compiler is [**GNU C/C++ compiler**](htt
   
 #####Unix/Linux Installation
 
-For Linux or Unix to check if GCC is installed then enter the following command from the command line:
+For Linux or Unix to check if GCC is installed, enter the following command from the command line:
 
 	$ g++ -v
 
@@ -87,7 +85,7 @@ The article [How To Install Gcc Compiler On Mac OS X](http://www.mkyong.com/mac/
 
 #####Windows Installation
 
-To install GCC for Windows install [**MinGW**](http://www.mingw.org), and follow the link to the MinGW download page. Download the latest version of the MinGW installation program, which should be named MinGW-<version>.exe.
+To install GCC for Windows install [**MinGW**](http://www.mingw.org), and follow the link to the MinGW download page. Download the latest version of the MinGW installation program.
 
 While installing MinWG, at a minimum, install gcc-core, gcc-g++, binutils, and the MinGW runtime. Then add the bin subdirectory of MinGW installation to PATH environment variable so that gcc, g++, etc compiler can be run from the Windows command line.
 
@@ -96,7 +94,7 @@ While installing MinWG, at a minimum, install gcc-core, gcc-g++, binutils, and t
 #  
 The C++ programming language is built on C as indicated by increment operator ++. C++ is an Object Oriented Programming Language. Just like C, C++ built-in data types are char, short, int, long, float, double, etc. Further C++ encourges building your own data type and data type heirarchies to describe effectively the real-world problems.  
 
-So C++ encorages you to think in terms of Objects which is associated with the user defined data type stored in a chunck of memory. So essentially C++ is made up of
+So C++ encourages you to think in terms of Objects which is associated with the user defined data type stored in a chunck of memory. So essentially C++ is made up of
 
 1. **Class** - This is essentially a User Defined Data Type. e.g. We can define a class called Dog which is essentially an Animal. We can describe Dog by its Color, Breed, Name, etc as well as Dogs behaviour by Barking, Wagging, Eating, etc.
 2. **Object** - This is an instance of a Class having a chunck of memory. So taking the same e.g. of Dog Class - Dog with Name - Slash, Breed - Labrador, Color - White is an Object with proper value for all the attributes describing the Dog.
@@ -177,7 +175,7 @@ Let us look at a simple code that would print the words Hello World on the conso
 
 ![C++ Compile and Run Flow Chart](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/C++CompileAndRunFlow.png) 
 
-**Step 1:** Write the program hello.cpp using any Text Editor 
+**Step 1:** Write the program hello.cpp using any [Text Editor](@editor) 
 
 **Step 2:** Compile the program, translating it into machine instructions. In its 
 original form, the program is text or source code. Once translated, the source code becomes Object Code. If there are any Compilation error, fix the code and again compile the program. There are 2 Methods to compile.  
