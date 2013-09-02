@@ -1,6 +1,7 @@
 #Pointers
 
 [New Class Objects At Run Time](#Objects)   
+[Storing Pointers in Class Objects](#Storing)   
 
 
 <a name="Objects"/>
@@ -30,9 +31,45 @@ cptr = new cylinder;
 When the above statement is used for the class object, the default constructor is called.   
 Now that *cptr value is a cylinder object, you can use *cptr in larger expression involving the class operators and variables.   
 The following code is how operators and functions can be accessed. 
-```
-cptr -> radius;
-cptr -> volume();
-cptr -> radius = 3.9;
-```
+
+__cptr -> radius;__   
+__cptr -> volume();__   
+__cptr -> radius = 3.9;__   
 The first line of code is how variables are accesed from pointers. The second is how functions are accesed, and the third is how variables are written. 
+
+<a name="Storing"/>
+###Storing Pointers in Class Objects
+Pointers are extreamly usefull for creating arrays that allocate space only at runtime.   
+Arrays of pointers use alot less space then array of objects.   
+Defining a array of pointers is the same ad defining a normal pointer:
+```
+cylinder *oil_tank_pointers[100];
+```
+Accessing thie array is the same as any nomral array.   
+__*oil_tank_pointers[4]__ refers to the 5th pointer in the array.   
+Accessing the varibales and functions of the classes in the array are the same as a normal pointer.   
+__*oil_tank_pointers[4]->radius__ gives the value of the radius of the 5th pointer in the array.   
+All of this combined can create an effecient program to compute the volume of many tanks.   
+First, the pointers in the array have to be intialized and assigned values. 
+```
+int main(){
+	int limit;
+	double raidus, length;
+	for(limit = 0; cin >> radius >> length; ++limit){
+		oil_tank_pointers[limit] = new cylinder;
+		oil_tank_pointers[limit] -> radius = radius;
+		oil_tank_pointers[limit] -> length = length;
+	}
+```
+This for-loop will endlessly ask for inputs for the radius and length. Each time, the input will be stored in a cylinder object. 
+The next part is to take the array of cylinders pointers and find the total volume. 
+```
+	double sum = 0.0;
+	for(int counter = 0; counter < limit; ++counter){
+		sum = sum + oil_tank_pointers[counter] -> volume();
+	}
+	cout << "The total volume in the " << limit << " storage tanks is " << sum << endl;
+}
+```
+This program is extremly efficient because cylinder obects, which are each 16 bytes, are only created when they have to be. The rest of the space in the array are pointers which are alot smaller.   
+
