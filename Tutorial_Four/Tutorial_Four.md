@@ -3,6 +3,7 @@
 [Numerical Predicates](#Predicates)   
 [One-Way and Two-Way Conditional Statements](#ConditionalStatements)   
 [Iteration Statements](#Iteration)   
+[Practice Problems](#Practice)   
 
 <a name="Predicates"/>
 ###Predicates
@@ -162,4 +163,8 @@ In the above code, the temperature is incremented or decremented using a for loo
 The for loop intiates the counter variable, checks the boolean expresion to see if it true, and increments counter all in one line.   
 In this example, a for-loop is more useful, however there are example where a while-loop would be a better choice. It is up to the programmer to decide which is more effecient. 
 
+<a name="Practice"/>
+###Practice Problems
+1.Write an iterative program that accepts two positive integers, m and n, and computes m^n. If m or n are not positive, return -1 and output "Inputs not valid".   
+2.Write an iterative program that accpets a postive integer, n, and calculate n! where n! = _n*(n-1)*(n-2)*...*1_. If n is not positive, return -1 and output "Inputs not valid".   
 	
