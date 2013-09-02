@@ -62,7 +62,5 @@ int main(){
 		 << "At the end of month 4, there are " << rabbit(4) << endl
 		 << "At the end of month 5, there are " << rabbit(5) << endl;
 		 
-	cout << recursive_power_function(2,3) << endl;
-	cout << recursive_factorial_function(3) << endl;
-	cout << factorial_function(3) << endl;
+	return 1;
 }
