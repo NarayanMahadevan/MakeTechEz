@@ -2,6 +2,32 @@
 
 using namespace std;
 
+int iterative_power_function(int m, int n){	
+	if(m < 0 || n < 0){
+		cout << "Input not valid" << endl;
+		return -1;
+	}else{
+		int product = 1;
+		for(int x=0; x<n; x++){
+			product *= m;
+		}
+	return product;
+	}
+}
+
+int iterative_factorial_function(int n){
+	if( n<=0){
+		cout << "Input not valid" << endl;
+		return -1;
+	}else{
+		int product = 1;
+		for(int x = 1; x <= n; x++){
+			product *= x;
+		}
+	return product;
+	}
+}
+
 int main(){
 	int temp;
 	cin >> temp;
