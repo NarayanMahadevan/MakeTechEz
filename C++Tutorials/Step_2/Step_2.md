@@ -130,11 +130,11 @@ class exampleClass{
 };
 
 int main(){
-	exampleClass default;
+	exampleClass example;
 	exampleClass specified(15, 10, 10);
-	cout << "The default height is " << default.height << endl
-		 << "The defualt width is " << default.width << endl
-		 << "The defualt length is " << default.length << endl
+	cout << "The default height is " << example.height << endl
+		 << "The defualt width is " << example.width << endl
+		 << "The defualt length is " << example.length << endl
 		 << "The specified height is " << specified.height << endl
 		 << "The specified width is " << specified.width << endl
 		 << "The specified length is " << specified.length << endl;
@@ -161,7 +161,6 @@ This program shows how member functions make computations easier
 //
 //  Program Name - S2_MemberFunctions.cpp
 //  Series: GetOnToC++ Step: 2
-//
 //  Purpose: This program shows how member functions make computations easier
 //
 //  Compile: g++ S2_MemberFunctions.cpp -o S2_MemberFunctions
@@ -177,7 +176,7 @@ class exampleClass{
 		double height, width, length;
 		exampleClass(){height = 10; width = 5; length = 15; };
 		exampleClass(double h, double w, double l){height = h; width = w; length = l; };
-		double volume(){return h*w*l);
+		double volume(){return height*width*length;};
 };
 
 double volume(double h, double w, double l){
@@ -185,11 +184,11 @@ double volume(double h, double w, double l){
 }
 
 int main(){
-	exampleClass default;
-	cout << "Using the volume function not tied to a class " << endl;
-		 << volume(default.height, default.width, defualt.length);
+	exampleClass example;
+	cout << "Using the volume function not tied to a class " << endl
+		 << volume(example.height, example.width, example.length)<< endl;
 	cout << "Using the volume member function " << endl
-		 << default.volume();
+		 << example.volume() << endl;
 }
 ```
 Note that using the volume member function is alot easier and allows for less mistakes when it is called. 
@@ -231,9 +230,9 @@ using namespace std;
 
 class secureClass{
 	public:
-		secureClass(){ password = 12345};
-		secureClass(double p){password = p };
-		readPassword(){ return password; };
+		secureClass(){ password = 12345; };
+		secureClass(double p){password = p; };
+		double readPassword(){ return password; };
 	private:
 		double password;
 };
@@ -241,16 +240,18 @@ class secureClass{
 class insecureClass{
 	public:
 		double password;
-		insecureClass(){ password = 09876};
-		insecureClass(double p){password = p };
+		insecureClass(){ password = 98769; };
+		insecureClass(double p){password = p; };
+};
 		
 int main(){
 	secureClass secure;
 	insecureClass insecure;
 	cout << "The secure class password is " << secure.readPassword() << endl;
-	cout << "The insecure class password is " << insecure.password() << endl;
+	cout << "The insecure class password is " << insecure.password << endl;
 	insecure.password  = 6584;
-	cout << "The insecure class password can be changed because the password variable is not private. " << insecure.password() << endl;
+	cout << "The insecure class password can be changed because the password variable is not private. " << insecure.password << endl;
+	return 0;
 }
 ```
 
