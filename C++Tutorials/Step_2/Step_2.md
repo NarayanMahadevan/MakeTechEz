@@ -16,7 +16,7 @@ This tutorial is meant to teach the basics of classes.
 //  Program Name - S2_Classes.cpp
 //  Series: GetOnToC++ Step: 2
 //
-//  Purpose: This program computes the Volume of the Box Car and the Tank Car  
+//  Purpose: This program creates a boxCar class with contructors, functions and private variables 
 //
 //  Compile: g++ S2_Classes.cpp -o S2_Classes
 //  Execute: ./S2_Classes
@@ -108,6 +108,17 @@ Both of these constructors intilize the member variables of the class to either 
 ####Side Step
 This program shows the differences between default and specified constructors. 
 ```
+//
+//  Program Name - S2_Constructors.cpp
+//  Series: GetOnToC++ Step: 2
+//
+//  Purpose: This program shows the difference between default and specified constructors.
+//
+//  Compile: g++ S2_Constructors.cpp -o S2_Constructors
+//  Execute: ./S2_Constructors
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  
 #include <iostream>
 using namespace std;
 
@@ -147,6 +158,17 @@ All functions have access to the member variables of the class.
 ####Side Step
 This program shows how member functions make computations easier
 ```
+//
+//  Program Name - S2_MemberFunctions.cpp
+//  Series: GetOnToC++ Step: 2
+//
+//  Purpose: This program shows how member functions make computations easier
+//
+//  Compile: g++ S2_MemberFunctions.cpp -o S2_MemberFunctions
+//  Execute: ./S2_MemberFunctions
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  
 #include <iostream>
 using namespace std;
 
@@ -193,6 +215,17 @@ It is good practice to always have reader and writer functions for every class y
 ####Side Step
 Uses of private variables
 ```
+//
+//  Program Name - S2_PrivateVariables.cpp
+//  Series: GetOnToC++ Step: 2
+//
+//  Purpose: This program creates a boxCar class with contructors, functions and private variables 
+//
+//  Compile: g++ S2_PrivateVariables.cpp -o S2_Variables
+//  Execute: ./S2_Variables
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  
 #include <iostream>
 using namespace std;
 
@@ -258,4 +291,5 @@ The same syntax can be used to call member functions as well as the writer funct
 <a name="Practice"/>
 ###Practice Problem
 Define a tankCar class with private member variables raidus and height, a public volume member function, a default constructor, a constructor with two parameters, and reader and writer functions. The volume of a tank car is pi X radius^2 X height   
+Define a flatCar class with private member variables length and width, a public volume member function, a default constructor, a constructor with two parameters, and reader and writer functions.The volume of a flat car is 8.25 X width X  length.
 
