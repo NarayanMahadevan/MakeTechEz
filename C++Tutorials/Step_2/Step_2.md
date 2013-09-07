@@ -7,7 +7,7 @@ This tutorial is meant to teach the basics of classes.
 [Explaining Constructor Member Functions](#Constructors)   
 [Explaining Member Functions](#MemberFunctions)   
 [Explaining Reader and Writer Member Functions](#ReaderAndWriter)   
-[Using Classes](#Using Classes)   
+[Using Classes](#UsingClasses)   
 [Practice Problems](#Practice)   
 
 #####Main Program
