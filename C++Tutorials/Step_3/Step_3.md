@@ -110,6 +110,17 @@ Now when a gondalaCar class object uses its volume functions, it will use the vo
 This program shows how class inheritance stops code duplication
 ```
 #include <iostream>
+//
+//  Program Name - S3_Inheritance.cpp
+//  Series: GetOnToC++ Step: 3
+//
+//  Purpose: This program designs multiple car classes and their class heirarchies
+//
+//  Compile: g++ S3_Inheritance.cpp -o S3_Inheritance
+//  Execute: ./S3_Inheritance
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+// 
 using namespace std;
 
 class human{
