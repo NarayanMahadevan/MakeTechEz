@@ -7,6 +7,7 @@ This tutorial is about class inheritance.
 [Designing Classes and Class Heirarchies](#Design)   
 [Practice Problem](#Practice)   
 
+```
 //
 //  Program Name - S3_Classes.cpp
 //  Series: GetOnToC++ Step: 3
