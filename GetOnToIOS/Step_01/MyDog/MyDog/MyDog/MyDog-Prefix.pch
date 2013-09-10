@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'MyDog' target in the 'MyDog' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

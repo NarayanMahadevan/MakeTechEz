@@ -2,7 +2,8 @@
 
 ## Purpose
 #  
-The purpose of this **Get On To C++** tutorials is to help you learn the essentials of C++ programming by solving live programs. This tutorial is different from other tutorials because of the following
+The purpose of this **Get On To C++** tutorials is to help you learn the essentials 
+of C++ programming. Mainly by writing and compiling lot of C++ programs than reading lot of theory. Its learning C++ by practice. This tutorial is different from other tutorials because of the following
 
 1. Learning and being a **Confident C++ programmer** is a simple **18 Step Process** which can be completed in flat **2 - 4 weeks** time.
 
