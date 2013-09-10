@@ -1,5 +1,14 @@
-//Chapter 15: Class Inheritance
-
+//
+//  Program Name - S3_Classes.cpp
+//  Series: GetOnToC++ Step: 3
+//
+//  Purpose: This program designs multiple car classes and their class heirarchies
+//
+//  Compile: g++ S3_DesigningClasses.cpp -o S3_DesigningClasses
+//  Execute: ./S3_DesigningClasses
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  
 
 #include <iostream>
 
@@ -10,7 +19,7 @@ const double pi = 3.14159;
 const double currentYear = 2013;
 //Classes
 class container{
-  public:
+	public:
 		int percentLoaded;
 		//Default constructor
 		container(){}
@@ -87,22 +96,13 @@ class liquidgasCar : public railroadCar, public sphere{
 		//Variables
 		int numberOfContainers;
 };
-
 //Main Method
 int main(){
-	//Objects using constructors
 	boxCar b;
-	tankCar t;
-	flatCar f;
-	gondalaCar g;
-	liquidgasCar l;
 	b.percentLoaded = 50;
 	b.yearBuilt = 1968;
 	cout << "The age of the boxCar is " << b.age() << endl;
 	cout << "The load percentage of the boxCar is " << b.percentLoaded << endl;
 	cout << "The volume of the boxCar is " << b.volume() << endl;
-	//Showing the difference between two volume functions
-	cout << "Volume of gondalacar using its volume function " << g.volume() << endl;
-	cout << "Volume of gondlaCar using the box volume functions " << g.box::volume() << endl;
 }
 	

@@ -1,5 +1,14 @@
-//Chapter 12: Reader and Writer Funcions
-
+//
+//  Program Name - S2_Classes.cpp
+//  Series: GetOnToC++ Step: 2
+//
+//  Purpose: This program creates a boxCar class with contructors, functions and private variables 
+//
+//  Compile: g++ S2_Classes.cpp -o S2_Classes
+//  Execute: ./S2_Classes
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  
 
 #include <iostream>
 
@@ -10,33 +19,36 @@ const double pi = 3.14159;
 
 //Classes
 class boxCar{
-  public:
+	public:
 		boxCar();
 		boxCar(double h, double w, double l);
-		double height, width, length;
 		double volume();
 		double readHeight(), readWidth(), readLength();
 		double writeHeight(double h), writeWidth(double w), writeLength(double l);
+	private:
+		double height, width, length;
 };
 
 class tankCar{
 	public:
 		tankCar();
 		tankCar(double r, double l);
-		double radius, length;
 		double volume();
 		double readRadius(), readLength();
 		double writeRadius(double r), writeLength(double l);
+	private:
+		double radius, length;
 };
 
 class flatCar{
 	public:
 		flatCar();
 		flatCar(double w, double l);
-		double width, length;
 		double volume();
 		double readWidth(), readLength();
 		double writeWidth(double w), writeLength(double l);
+	private:
+		double width, length;
 };
 
 //Default Constructors
@@ -96,34 +108,26 @@ double tankCar::writeLength(double l){ length = l; }
 double flatCar::writeWidth(double w){ width = w; }
 double flatCar::writeLength(double l){ length = l; }
 
+
 //Main Method
 int main(){
 	//Objects using constructors
 	boxCar a;
-	tankCar y;
-	flatCar m;
+	boxCar b(10.5,9.5,30.0);
 	//Using the Reader Functions
-	cout << "The height of the box car is " <<a.readHeight() << endl
-		 << "The width of the box car is " <<a.readWidth() << endl
-		 << "The length of the box car is " <<a.readLength() << endl
-		 << "The radius of the tank car is " <<y.readRadius() << endl
-		 << "The length of the tank car is " <<y.readLength() << endl
-		 << "The width of the flat car is " <<m.readWidth() << endl
-		 << "The length of the flat car is " <<m.readLength() << endl;
-	//Printing the Default Volume
+	cout << "The height of the default box car is " <<a.readHeight() << endl
+		 << "The width of the default box car is " <<a.readWidth() << endl
+		 << "The length of the default box car is " <<a.readLength() << endl
+		 << "The height of the specified box car is " <<b.readHeight() << endl
+		 << "The width of the specified box car is " <<b.readWidth() << endl
+		 << "The length of the specified box car is " <<b.readLength() << endl
+	//Printing the Two Volumes
 	cout << "The volume of the default box car is " << a.volume() << endl
-		 << "The volume of the default tank car is " << y.volume() << endl
-		 << "The volume of the default flat car is " << m.volume() << endl;
+		 << "The volume of the specified box car is " << b.volume() << endl
 	//Using the Writer Functions	 
 	cout << "Writing the box car's length as 30.00" << endl;
 		a.writeLength(30.00);
-	cout << "Writing the tank car's length as 30.00" << endl;
-		y.writeLength(30.00);
-	cout <<	"Writing the flat car's length as 30.00" << endl;
-		m.writeLength(30.00);
 	//Printing the Changed Volume	 	 
 	cout << "The volume of the changed box car is " << a.volume() << endl
-		 << "The volume of the changed tank car is " << y.volume() << endl
-		 << "The volume of the changed flat car is " << m.volume() << endl;
-	return 1;
+	return 0;
 }	

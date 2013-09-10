@@ -19,6 +19,35 @@ int rabbit(int n){
 		return previousMonth(n) + penultimateMonth(n);
 	}
 }
+
+int recursive_power_function(int m, int n){
+	if(n == 1){
+		return m;
+	}else if(n == 0){
+		return 1;
+	}else{
+		return m*recursive_power_function(m,n-1);
+	}
+}
+
+int recursive_factorial_function(int n){
+	if(n == 1){
+		return 1;
+	}else{
+		return n * recursive_factorial_function(n-1);
+	}
+}
+int factorial_function(int);
+int base(){ return 1; }
+int recurse(int n){ return n * factorial_function(n-1); }
+
+int factorial_function(int n){
+	if(n == 0){
+		return base();
+	}else{
+		return recurse(n);
+	}
+}
 int main(){
 	cout << "FIRST PROGRAM" << endl
 		 << "At the end of month 1, there is " << rabbits(1) << endl
@@ -32,4 +61,6 @@ int main(){
 		 << "At the end of month 3, there are " << rabbit(3) << endl
 		 << "At the end of month 4, there are " << rabbit(4) << endl
 		 << "At the end of month 5, there are " << rabbit(5) << endl;
+		 
+	return 1;
 }
