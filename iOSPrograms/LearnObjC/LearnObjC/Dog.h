@@ -20,13 +20,13 @@
 
 @interface Dog : NSObject
 {
-    // Instance Variables
+    // Section 1: Instance Variables declared here
     NSString* name;
     NSString* breed;
     NSString* color;
 }
 
-// Accessor Methods
+// Section 2: Accessor Methods i.e. getter and setter methods are declared here
 
 // getter methods
 - (NSString*) name;
@@ -38,11 +38,31 @@
 - (void) setBreed: (NSString*) aBreed;
 - (void) setColor: (NSString*) aColor;
 
+
+// Section 3: Properties are declared here
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, strong) NSString* breed;
 @property (nonatomic, strong) NSString* color;
 @property (nonatomic, strong) NSNumber* age;
 
--(id)initWithName:(NSString*)aName Breed:(NSString*)aBreed Color:(NSString*)aColor AndAge:(NSNumber*)aAge;
+// This property defines if the dog is a Police Dog and defines a new setter method 
+@property (nonatomic, assign, setter=isPoliceDog:) BOOL isPoliceDog;
+
+
+// Section 4: Class Methods and Instance Methods declared here
+
+// Class Method to initialize Dog Object
++(id)alocAndInitName:(NSString*)aName Breed:(NSString*)aBreed Color:(NSString*)aColor
+              AndAge:(NSNumber*)aAge;
+
+// Instance Methods to Set Dog Object Properties
+-(id)initName:(NSString*)aName Breed:(NSString*)aBreed Color:(NSString*)aColor AndAge:(NSNumber*)aAge;
+
+// Instance Methods to describe Dogs Behaviour such as temperament, aggression, intelligence etc
+-(void) temperament;
+
+-(void) aggression;
+
+-(void) intelligence;
 
 @end

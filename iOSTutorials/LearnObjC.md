@@ -3,26 +3,23 @@
 <a name="intro"/></a>
 ## Introduction
 #  
-Objective-C is the primary programming language for writing software in OS X and iOS. It’s a superset of the C programming language and provides object-oriented capabilities and a dynamic runtime. Objective-C inherits the syntax, primitive types, and flow control statements of C and adds syntax for defining classes and methods.
+Objective-C is the primary programming language for writing software in OS X and iOS. It’s a superset of the C programming language and provides object-oriented capabilities and a dynamic runtime. Objective-C inherits the syntax, primitive types, and flow control statements of C and adds syntax for defining classes and methods. Its assumed that you have basic understanding of C and Object Oriented Programming. 
 
+Objective-C is the first step before programming in iOS. This step will help you understand all you have to know about Objective-C by implementing a [**Simple Project**](#simple_project) as defined below. The Concepts introduced in this step are:
 
-
-Objective-C is the first step before programming in iOS. This step will help you understand all you have to know about Objective-C write from 
-
-
-1. [**Define a new Project**](#create_project)
-2. [**Create Objective-C Project**](#create_project)
-3. [**Definition of new classes**](#create_class)  
+1. [**Create Objective-C Project**](#create_project)
+2. [**Definition of new classes**](#create_class)  
+3. [**Declaration of Properties**](#declare_props)
 4. [**Defining Class and instance methods**](#create_methods)
-5. [**Declaration of Properties and @synthesize directive**](#declare_props) to auto-generate Accessor Methods
-6. [**Method invocation**](#call_methods)
+5. [**Class Implementation**](#class_implementation)
+6. [**Object Creation and Method invocation**](#call_methods)
 7. [**Static and dynamic typing**](#typing_var)
 8. [**Memory Management**](#manage_memory)
 9. [**Blocks**](#set_blocks) — encapsulated segments of code that can be executed at any time
 10. [**Working with protocols and categories**](#explain_protocols)
 
-<a name="create_class"/></a>
-## Define a new Project
+<a name="simple_project"/></a>
+## Simple Project
 #  
 This is a simple project, the goal being end of this step you are comfortable with basics of Objective-C Programming. In this step, you will learn to create new Project, Define a new Class, specify class attributes and properties, define class and instance methods, etc as listed in item 2 - 10. Every section would introduce a new concept with the sample code. All the sample codes when copied one-by-one into your xcode environment will finally build up into an executable project.
 
@@ -90,7 +87,11 @@ The Foundation framework provides many primitive object classes and data types, 
 
 #####Class Declaration
 
-The class declaration begins with the **@interface** compiler directive and ends with the **@end** directive. The instance variables, properties, and methods appear between these two statements. The class interface is usually stored in the .h file.  
+The class declaration begins with the **@interface** compiler directive and ends with the **@end** directive. The instance variables, properties, and methods appear between these two statements. The class interface is usually stored in the .h file. The following diagram typically shows class declaration  
+
+#  
+![Class Definition](https://raw.github.com/NarayanMahadevan/MakeTechEzResources/master/images/GetOnToC++/ClassDefinition.png) 
+#  
 
 The following sample shows class declaration. The class interface defined is Dog and hence the header file name is Dog.h and the implemntation file is Dog.m. Following the class name (and separated from it by a colon) is the name of the parent class NSObject. In Objective-C, a class can have only one parent.
 
@@ -156,12 +157,11 @@ The following code sample shows the accessor methods for the instance variables.
 **Note: ** The way setter method is defined is exactly the same way the methods are defined in Objective-C. See more in [**Class and Instance Methods**](#create_methods)
 ***
 
-
 <a name="declare_props"/></a>
-## Declaration of Properties and @synthesize Directive
+## Declaration of Properties
 #  
 
-A property in the general sense is some data encapsulated or stored by an object. It is either an attribute—such as a name or a color—or a relationship to one or more other objects.  
+A property in the general sense is some data encapsulated or stored by an object. It is either an attribute—such as a name or a color or a relationship to one or more other objects.  
 
 Properties in Objective-C provide a well-defined interface for other classes to manipulate attributes of a class. It is extension of Instance Variable described above. As such it is better to use Properties then Instance Variable. 
 
@@ -195,6 +195,16 @@ Property essentially is a feature in Objective-C that allow automatic generation
 - **Atomocity**
   - **atomic** (Default Setting) - Only one thread executes at a time on the property
   - **nonatomic** - Multiple thread can access and set the property. Is not thread sefe but gives better performance
+
+<a name="create_methods"/></a>
+## Defining Class and instance methods
+#  
+
+
+<a name="class_implementation"/></a>
+## Class Implementation
+#  
+
 
 <a name="synthesize"/></a>
 #### @synthesize Directive
@@ -232,4 +242,24 @@ OR
 @synthesize property_name = instance_name;
 
 Here instance_name is optional. It helps to refer the instance variable by instance name. So dogs instance veriable can be accessed as self.name or mName in the implementation file. Our recomendation is to have an instance name as mName, mBreed, etc for readability of code so there is clear seperation between local veriable and class veriable. 
+
+<a name="call_methods"/></a>
+## Object Creation and Method invocation
+#  
+
+<a name="typing_var"/></a>
+## Static and dynamic typing
+#  
+
+<a name="manage_memory"/></a>
+## Memory Management
+#  
+
+<a name="set_blocks"/></a>
+## Blocks
+#  
+
+<a name="explain_protocols"/></a>
+## Working with protocols and categories
+#  
 

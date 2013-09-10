@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../GetOnToIOS/Step_01/MyDog/MyDog/MyDog.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:LearnObjC/LearnObjC.xcodeproj">
    </FileRef>
    <FileRef
