@@ -1,4 +1,14 @@
-
+//
+//  Program Name - S7_Pointers.cpp
+//  Series: GetOnToC++ Step: 7
+//
+//  Purpose: This program illustrates how to use arrays in functions
+//
+//  Compile: g++  S7_Pointers.cpp -o  S7_Pointers
+//  Execute: ./S7_Pointers
+//
+//  Created by Abinav Janakiraman on 15/9/13.
+//
 #include <iostream>
 using namespace std;
 
