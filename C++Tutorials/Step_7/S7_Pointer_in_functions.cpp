@@ -1,3 +1,14 @@
+//
+//  Program Name - S7_Pointer_in_functions.cpp
+//  Series: GetOnToC++ Step: 7
+//
+//  Purpose: This program illustrates how to and the benefits of pointers in functions
+//
+//  Compile: g++ S7_Pointer_in_functions.cpp -o S7_Pointer_in_functions
+//  Execute: ./S7_Pointer_in_functions
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+// 
 #include <iostream>
 using namespace std;
 
