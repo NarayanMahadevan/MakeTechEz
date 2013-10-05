@@ -15,9 +15,12 @@ using namespace std;
 
 int main(){
 	int temp;
+	//Getting user input for temperature
 	cin >> temp;
+	//Printing the temperature
 	cout << "The temperature is "
 		 << temp
+		 //Using the conditional operator so that if "degree" has right pluralization
 		 << (temp == 1 ? " degree" : " degrees") //Boolean expression ? if-true expression : if false expression
 		 << endl;
 }
