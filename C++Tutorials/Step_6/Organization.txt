@@ -1,4 +1,6 @@
 Section 1:
-  Side Step:2DArrays
+  Side Step: TraversingArrays
+  Side Step: ArrayFunctions
+  Side Step: 2DArrays
 Section 2:
-  Side Step:ObjectArrays
+  Side Step: ObjectArrays
