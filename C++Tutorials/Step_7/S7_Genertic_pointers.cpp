@@ -1,3 +1,14 @@
+//
+//  Program Name - S7_Genertic_pointers.cpp
+//  Series: GetOnToC++ Step: 7
+//
+//  Purpose: This program illustrates how to use generic pointers
+//
+//  Compile: g++ S7_Genertic_pointers.cpp -o S7_Genertic_pointers
+//  Execute: ./S7_Genertic_pointers
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+// 
 #include <iostream>
 using namespace std;
 
