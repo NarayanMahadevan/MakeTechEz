@@ -2,7 +2,7 @@
 //  Program Name - S7_Pointers.cpp
 //  Series: GetOnToC++ Step: 7
 //
-//  Purpose: This program illustrates how to use arrays in functions
+//  Purpose: This program illustrates how to use pointers.
 //
 //  Compile: g++  S7_Pointers.cpp -o  S7_Pointers
 //  Execute: ./S7_Pointers
