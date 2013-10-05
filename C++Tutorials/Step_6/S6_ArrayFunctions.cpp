@@ -12,8 +12,7 @@
 #include <iostream>
 using namespace std;
 
-
-
+//Functions that takes an array and its size as parameters, then prints the array
 void print_array(int input[], int size){
 	for(int x = 0; x < size; x++){
 		cout << input[x] << " " << endl;
@@ -21,7 +20,9 @@ void print_array(int input[], int size){
 }
 
 int main(){
+	//Intializing the array
 	int example[3] = {1, 3, 5};
+	//Calling the print_array function
 	print_array(example, 3);
 	return 0;
 }
