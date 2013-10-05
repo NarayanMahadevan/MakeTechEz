@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+//Practice Problem 1
 int iterative_power_function(int m, int n){	
 	if(m < 0 || n < 0){
 		cout << "Input not valid" << endl;
@@ -14,7 +14,7 @@ int iterative_power_function(int m, int n){
 	return product;
 	}
 }
-
+//Practice Problem 2
 int iterative_factorial_function(int n){
 	if( n<=0){
 		cout << "Input not valid" << endl;
