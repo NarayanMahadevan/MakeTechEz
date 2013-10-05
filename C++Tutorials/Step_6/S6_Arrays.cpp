@@ -1,3 +1,14 @@
+//
+//  Program Name - S6_Arrays.cpp
+//  Series: GetOnToC++ Step: 6
+//
+//  Purpose: This program illustrates how to use arrays 
+//
+//  Compile: g++  S6_Arrays.cpp -o  S6_Arrays
+//  Execute: ./S6_Arrays
+//
+//  Created by Narayan Mahadevan on 18/09/13.
+// 
 #include <iostream>
 using namespace std;
 
