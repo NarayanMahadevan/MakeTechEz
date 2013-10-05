@@ -15,10 +15,11 @@ using namespace std;
 int main(){
 	int i = 10;
 	double d = 10.0;
-	cout << "i = (int) d	  yeilds " << (i == (int) d) << endl
-		 << "(double) i != d   yeilds " << ((double) i != d) << endl
-		 << "i > (int) d	  yeilds " << (i > (int) d) << endl
-		 << "(double) i < d	  yeilds " << ((double) i < d) << endl
-		 << "i >= (int) d 	  yeilds " << (i >= (int) d) << endl
-		 << "(double) i <= d   yeilds " << ((double) i <= d) << endl;
+	//Series of examples to show what happens when variables are cast into different types
+	cout << "i = (int) d	  yeilds " << (i == (int) d) << endl //casting d as an int and seeing if equal to i
+		 << "(double) i != d   yeilds " << ((double) i != d) << endl // casting i as a double and seeing if not equal to d
+		 << "i > (int) d	  yeilds " << (i > (int) d) << endl // casting d as an int and seeing if less then d
+		 << "(double) i < d	  yeilds " << ((double) i < d) << endl //casting i as a double and seeing if less then d
+		 << "i >= (int) d 	  yeilds " << (i >= (int) d) << endl // casting d as a int and seeing if less then or equal to i
+		 << "(double) i <= d   yeilds " << ((double) i <= d) << endl;// casting i as a double and seeing if less then or equal to d 
 }
