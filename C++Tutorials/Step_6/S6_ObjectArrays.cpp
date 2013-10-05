@@ -54,10 +54,12 @@ int main(){
 	example[0] =  box();
 	example[1] = cylinder();
 	example[2] = sphere();
-	//Using the parts of the array
+	//Setting the percent loaded
 	example[0].percentLoaded = 10;
 	example[1].percentLoaded = 50;
 	example[2].percentLoaded = 70;
+	//Calling the getPercentLoaded function that is part of the container class. 
+	//Note that it is not possible to call any of the functions that are in the box/spehere/cylinder class
 	cout << "Box: " << example[0].getPercentLoaded() << endl
 		 << "Cylinder: " << example[1].getPercentLoaded() << endl
 		 << "Sphere: " << example[2].getPercentLoaded() << endl;
