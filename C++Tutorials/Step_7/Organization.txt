@@ -1,6 +1,7 @@
 Section 1:
   Side Step:AdressOfOperator
             PointerOperations
-            
+            Pointer to Pointer
+            Generic Pointer
 Section 2:
-  No Side Step
+  Side Step:Pointer in functions
