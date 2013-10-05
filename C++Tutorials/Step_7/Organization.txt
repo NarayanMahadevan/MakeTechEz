@@ -1,4 +1,6 @@
 Section 1:
   Side Step:AdressOfOperator
+            PointerOperations
+            
 Section 2:
   No Side Step
