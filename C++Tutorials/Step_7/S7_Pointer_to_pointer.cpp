@@ -2,7 +2,7 @@
 //  Program Name - S7_Pointer_to_pointer.cpp
 //  Series: GetOnToC++ Step: 7
 //
-//  Purpose: This program illustrates how to use arrays in functions
+//  Purpose: This program illustrates how to use a pointer to a pointer. 
 //
 //  Compile: g++  S7_Pointer_to_pointer.cpp -o  S7_Pointer_to_pointer
 //  Execute: ./S7_Pointer_to_pointer
