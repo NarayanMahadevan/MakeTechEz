@@ -1,3 +1,15 @@
+//
+//  Program Name - S9_Sample.cpp
+//  Series: GetOnToC++ Step: 9
+//
+//  Purpose: This program explains the benfits of protected classes
+//
+//  Compile: g++ S9_Sample.cpp -o S9_Sample
+//  Execute: ./S9_Sample
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+// 
+
 #include <stdlib.h>
 #include <iostream>
 
