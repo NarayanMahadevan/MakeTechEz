@@ -15,11 +15,13 @@ using namespace std;
 void process(void *dataPtr, int type) {
    int a;
    double b;
-
+   
    if (type == 1) {
+      //casting the void pointer as a int pointer
       a = *((int *)dataPtr);
       cout << "int value provided: " << a << endl;
    } else if (type == 2) {
+      //casing the void pointer as a float pointer
       b = *((float *)dataPtr);
       cout << "float value provided: " << b << endl;
    } else {
@@ -37,8 +39,6 @@ int main() {
    vPtr = &y; /* assigning pointer to float */
    vPtr = &x; /* assigning pointer to int */
 
-   /* We cannot dereference void ptr */
-   /* *vPtr = 100; */
 
    *((int *)vPtr) = 400;
    cout << "Value of x: " << x << endl;
