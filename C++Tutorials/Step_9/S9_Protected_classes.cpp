@@ -29,8 +29,7 @@ class box{
 		double height, width, length;
 };
 
-
-
+//Box car class that inherits railraod_car as well as protected box
 class box_car : public railroad_car, protected box{
 	public:
 		//Default constructor
@@ -40,8 +39,12 @@ class box_car : public railroad_car, protected box{
 		virtual void display_capacity(){cout << volume();}
 };
 int main(){
+	//A box car
 	box_car example;
+	//Showing how a protected inheritance limits the classes access
+	
 	//cout << example.height<< endl; DOES NOT WORK
+	
 	example.display_height();
 	box b;
 	cout << b.height << endl; //Does work, however since box has no default constructor, return random number
