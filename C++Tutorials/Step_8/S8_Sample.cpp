@@ -1,3 +1,15 @@
+//
+//  Program Name - S8_Sample.cpp.cpp
+//  Series: GetOnToC++ Step: 8
+//
+//  Purpose: This program illustrates how to change the values of enumerated types
+//
+//  Compile: g++ S8_Sample.cpp.cpp -o S8_Sample.cpp
+//  Execute: ./S8_Sample.cpp
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+// 
+
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
