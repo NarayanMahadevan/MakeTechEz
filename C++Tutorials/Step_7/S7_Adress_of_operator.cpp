@@ -14,12 +14,14 @@ using namespace std;
 int main(){
 
 	int i = 5;
+	//creating an int pointer
 	int *iptr;
+	//Poinitng the integer pointer to the adress i is stored at
 	iptr = &i;
-
+	
 	cout << "i = " << i << endl;
-
+	//Changing the value of i using the pointer
 	*iptr = 10;
-
+	
 	cout << "i = " << i << endl;
 }
