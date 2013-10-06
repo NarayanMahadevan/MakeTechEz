@@ -1,11 +1,11 @@
 //
-//  Program Name - S8_Sample.cpp.cpp
+//  Program Name - S8_Readability.cpp.cpp
 //  Series: GetOnToC++ Step: 8
 //
-//  Purpose: This program illustrates how to change the values of enumerated types
+//  Purpose: This program illustrates how to imrove readability with enumerated types and swtich statements
 //
-//  Compile: g++ S8_Sample.cpp.cpp -o S8_Sample.cpp
-//  Execute: ./S8_Sample.cpp
+//  Compile: g++ S8_Readability.cpp.cpp -o S8_Readability.cpp
+//  Execute: ./S8_Readability.cpp
 //
 //  Created by Narayan Mahadevan on 18/08/13.
 // 
