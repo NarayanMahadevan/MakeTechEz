@@ -3,6 +3,7 @@
 using namespace std;
 
 //Section 1
+//Classes
 class railroad_car{
 	public: 
 		railroad_car(){}
@@ -35,10 +36,12 @@ enum {engine_code, box_code, tank_code, caboose_code};
 
 int main(){
 	int n, number_of_cars, type;
-	
+	//Fow loop that takes in inputs and creates a car based on number inputed
 	for(number_of_cars = 0; cin >> type; ++number_of_cars){
 	  //Section 2
+	  	//Switch statements to take care of the different cases
 		switch (type){
+			//Enumerated types are used to improve readability
 			case engine_code: train[number_of_cars] = new engine;
 				break;
 			case box_code: train[number_of_cars] = new box_car;
@@ -51,7 +54,7 @@ int main(){
 				exit (0);
 		}
 	}
-		
+	//For loop that prints the name of each car in the train in order	
 	for( n = 0; n < number_of_cars; ++n){
 		train[n] -> display_name();
 		cout << endl;
