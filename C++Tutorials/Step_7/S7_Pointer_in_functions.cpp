@@ -12,7 +12,7 @@
 #include <iostream>
 using namespace std;
 
-
+//Function that adds two numbers and stores them in the sum pointer variable
 void addition(int *sum, int x, int y){
 	*sum = x + y;
 }
