@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//Classes
 class railroad_car{
 	public:
 		//Default constructor
@@ -29,20 +30,24 @@ class box{
 		double read_length(){return length;}
 		double height, width, length;
 };
-
+//Box_car  that extends railroad_car and box
 class box_car : public railroad_car, public box{
 	public:
-		//Default constructor
+		//Default constructor using the box's constructor
 		box_car() : box(10.5,9.5,40.0) {}
-		box_car(double l) : box(9.5,40.0) {height = l;}
+		//Specified constructor which has the height as an input
+		box_car(double h) : box(9.5,40.0) {height = h;}
 		virtual double display_height(){read_height();}
 		virtual void display_name(){cout << "box_car";}
 		virtual void display_capacity(){cout << volume();}
 };
 
 int main(){
+	//Default box car
 	box_car a;
+	//Specified box car
 	box_car b(11.00);
+	//Showing the difference between the two box_cars
 	cout << "Defaults length is " << a.display_height() << endl
 		 << "Specified length is " << b.display_height() << endl;
 }
