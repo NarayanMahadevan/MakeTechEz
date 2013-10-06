@@ -1,3 +1,15 @@
+//
+//  Program Name - S9_Protected_classes.cpp.cpp
+//  Series: GetOnToC++ Step: 9
+//
+//  Purpose: This program explains the benfits of protected classes
+//
+//  Compile: g++ S9_Protected_classes.cpp -o S9_Protected_classes
+//  Execute: ./S9_Protected_classes
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+// 
+
 #include <stdlib.h>
 #include <iostream>
 
