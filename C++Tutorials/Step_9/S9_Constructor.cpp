@@ -4,8 +4,8 @@
 //
 //  Purpose: This program explains how to use constructors inside of constructors
 //
-//  Compile: g++ S9_Constructor.cpp.cpp -o S9_Constructor.cpp
-//  Execute: ./S9_Constructor.cpp
+//  Compile: g++ S9_Constructor.cpp.cpp -o S9_Constructor
+//  Execute: ./S9_Constructor
 //
 //  Created by Narayan Mahadevan on 18/08/13.
 // 
