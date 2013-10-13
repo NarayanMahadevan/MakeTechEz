@@ -1,3 +1,14 @@
+//
+//  Program Name - S5_Sum.cpp
+//  Series: GetOnToC++ Step: 5
+//
+//  Purpose: This program uses recursion to fine the sum of a number and all the numbers before it 
+//
+//  Compile: g++ S5_Sum.cpp -o S5_Sum
+//  Execute: ./S5_Sum
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//
 #include <iostream>
 using namespace std;
 
