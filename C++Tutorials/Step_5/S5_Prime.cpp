@@ -1,3 +1,14 @@
+//
+//  Program Name - S5_Fibonacci.cpp
+//  Series: GetOnToC++ Step: 5
+//
+//  Purpose: This program uses recursion to return a Fibonacci number
+//
+//  Compile: g++ S5_Fibonacci.cpp -o S5_Fibonacci
+//  Execute: ./S5_Fibonacci
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+// 
 #include <iostream>
 using namespace std;
 
