@@ -1,3 +1,14 @@
+//
+//  Program Name - S5_Sample.cpp
+//  Series: GetOnToC++ Step: 5
+//
+//  Purpose: This program explains how to use recursion
+//
+//  Compile: g++ S5_Sample.cpp -o S5_Sample
+//  Execute: ./S5_Sample
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+// 
 #include <iostream>
 using namespace std;
 
