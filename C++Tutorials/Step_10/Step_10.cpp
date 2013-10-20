@@ -1,3 +1,14 @@
+//
+//  Program Name - Step_10.cpp
+//  Series: GetOnToC++ Step: 10
+//
+//  Purpose: This program shows how to return strings as well as use call-by-reference
+//
+//  Compile: g++ Step_10.cpp -o Step_10
+//  Execute: ./Step_10
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  
 #include <stdlib.h>
 #include <iostream>
 
