@@ -1,3 +1,15 @@
+//
+//  Program Name - S9_Private_class.cpp
+//  Series: GetOnToC++ Step: 9
+//
+//  Purpose: This program explains how to use constructors inside of constructors
+//
+//  Compile: g++ S9_Private_class.cpp -o S9_Private_class
+//  Execute: ./S9_Private_class
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+// 
+
 #include <iostream>
 #include <cstdlib>
 
