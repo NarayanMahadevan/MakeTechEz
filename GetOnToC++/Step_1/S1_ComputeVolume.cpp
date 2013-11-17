@@ -30,7 +30,54 @@ int gCurrentYear = 2013;
  */
 const double PI = 3.14159;
 
-// Section 3 - Write Functions
+// Section 4A - Function Prototype
+
+// The function prototype or declaration to calculate the Volume of the Box Car
+double calcBoxCarVolume(double, double, double);
+
+// The function prototype or declaration to calculate the Volume of the Tank Car
+double calcTankCarVolume(double, double);
+
+main ( ) { 
+    // Section 1 - Declaration of Variables 
+
+    /* 
+     1. The Vairbles defined below are Local Variables and are local to this 
+        main function. 
+     2. All Variables are of data type double(holds 8 bytes or 64 bits memory) 
+        and intialized to 0.0
+    */
+    // Variabes for Box Car
+    double length = 0.0, width = 0.0, height = 0.0;
+    
+    // Vairables for Tank Car which is a Cylinder
+    double radius = 0.0, lengthOfTankCar = 0.0;
+
+    // Section 3 - Output & Input Operators
+
+    // Reading the User inputs and setting the values of length, width and
+    // height of the Box Car
+    cout << "Please Enter the Length, Width and Height of the Box Car." 
+         << endl;
+    cin >> length >> width >> height;  
+    
+    // Reading the User inputs and setting the values of radius and length
+    // of the Tank Car
+    cout << "Please Enter the Radius and Length of the Tank Car." << endl;
+    cin >> radius >> lengthOfTankCar;  
+
+    // Section 5 - Function Call
+
+    // Calling Function calcBoxCarVolume to calculate the Volume of Box Car
+    double boxCarVol = calcBoxCarVolume(height, width, length);
+    cout << "The volume of the Box Car is " << boxCarVol << endl; 
+
+    // Calling Function calcTankCarVolume to calculate the Volume of Tank Car
+    double tankCarVol = calcTankCarVolume(radius, lengthOfTankCar);
+    cout << "The volume of the Tank Car is " << tankCarVol << endl; 
+}
+
+// Section 4B - Function Body
 
 /*
  * This function calculates the Volume of the Box Car
@@ -74,36 +121,6 @@ double calcTankCarVolume(double rad, double l) {
     
     // Returns the Tank Car Volume
     return tankCarVol;
-}
-
-main ( ) { 
-    // Section 1 - Declaration of Variables 
-
-    /* 
-     1. The Vairbles defined below are Local Variables and are local to this 
-        main function. 
-     2. All Variables are of data type double(holds 8 bytes or 64 bits memory) 
-        and intialized to 0.0
-    */
-    // Variabes for Box Car
-    double length = 0.0, width = 0.0, height = 0.0;
-    
-    // Vairables for Tank Car which is a Cylinder
-    double radius = 0.0, lengthOfTankCar = 0.0;
-
-    // Section 4 - Output & Input Operators
-
-    // Calling Function calcBoxCarVolume to calculate the Volume of Box Car
-    cout << "Please Enter the Length, Width and Height of the Box Car." << endl;
-    cin >> length >> width >> height;  
-    double boxCarVol = calcBoxCarVolume(height, width, length);
-    cout << "The volume of the Box Car is " << boxCarVol << endl; 
-
-    // Calling Function calcTankCarVolume to calculate the Volume of Tank Car
-    cout << "Please Enter the Radius and Length of the Tank Car." << endl;
-    cin >> radius >> lengthOfTankCar;  
-    double tankCarVol = calcTankCarVolume(radius, lengthOfTankCar);
-    cout << "The volume of the Tank Car is " << tankCarVol << endl; 
 }
 
 

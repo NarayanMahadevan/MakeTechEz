@@ -35,9 +35,28 @@
             // Attributes of Box Car are length, width and height
             double mLength, mWidth, mHeight; 
 
-            // Section 3A - Box Car Class Constructor Defined Here
+            // Section 3A - Box Car Class Member Functions Defined Here
 
-            // Section 4A - Box Car Class Member Functions Defined Here
+            /*
+             * This member function calculates the Volume of the Box Car
+             * return: volume of the Box Car
+             * Note: volume is the class member function and can directly access 
+             *       the member variables 
+             */    
+            double volume() {
+                /*
+                 * The scope of the boxCarVol variable is local to this function.
+                 * This means the memory is not available outside the function.
+                 * The local variable boxCarVol stores the volume of the Box Car
+                 */        
+                double boxCarVol = 0.0;
+                
+                // Box Car Volume Computation using Arithmatic Operations
+                boxCarVol = mHeight*mWidth*mLength;
+                
+                // Returns the Box Car Volume
+                return boxCarVol;
+            }
 
     };
 
@@ -51,18 +70,34 @@
             // Attributes of Tank Car are radius and length
             double  mRadius, mLength; 
 
-            // Section 3B - Tank Car Class Constructor Defined Here
+            // Section 3B - Tank Car Class Member Functions Defined Here
 
-            // Section 4B - Tank Car Class Member Functions Defined Here
+            /*
+             * This function calculates the Volume of the Tank Car
+             * return: volume of the Tank Car
+             * Note: volume is the class member function and can directly access 
+             *       the member variables 
+             */    
+            double volume() {
+                /*
+                 * The scope of the tankCarVol variable is local to this function.
+                 * This means the memory is not available outside the function.
+                 * The local variable tankCarVol stores the volume of the Tank Car
+                 */        
+                double tankCarVol = 0.0;
+                
+                // Tank Car Volume Computation using Arithmatic Operations
+                // M_PI is a macro defined in Math.h and its value is 3.14159            
+                tankCarVol = M_PI * mRadius * mRadius * mLength;
+                
+                // Returns the Tank Car Volume
+                return tankCarVol;
+            }
 
     };
 
     main ( ) { 
 
-        // Size of Box Car and Tank Car Class
-        cout << "Size of BoxCar Class = " << sizeof(BoxCar) << endl;
-        cout << "Size of TankCar Class = " << sizeof(TankCar) << endl;
-        
         // Declaration of Local Variables 
 
         // Variabes for Box Car
@@ -71,27 +106,54 @@
         // Vairables for Tank Car which is a Cylinder
         double radius = 0.0, lengthOfTankCar = 0.0;
 
-        // Section 5A - Create BoxCar Object and Assign values to its member 
+        // Section 4A - Create BoxCar Object and Assign values to its member 
         // variable
 
         // Read in the Variables of Box Car and Tank Car
         cout << "Please Enter the Length, Width and Height of the Box Car." 
-        	 << endl;
+        	     << endl;
         cin >> length >> width >> height;  
+
+        // Creating myBoxCar object for user defined class BoxCar. Once BoxCar
+        // Object is created, corresponding memory for the member variable is 
+        // created and can be accessed using the myBoxCar object.         
+        BoxCar myBoxCar;
+
+        // Assigning values to the Objects Member Variable
+        myBoxCar.mLength = length; 
+        myBoxCar.mHeight = height; 
+        myBoxCar.mWidth = width; 
         
-        // Section 6A - Calling Member Function volume to calculate the Volume of 
+        // Section 5A - Calling Member Function volume to calculate the Volume of 
         // BoxCar Object
+        cout << "The Volume of the Box Car Object of lth: " << myBoxCar.mLength 
+             << " Wt: " << myBoxCar.mWidth << " and Ht: " << myBoxCar.mHeight
+             << " is " << myBoxCar.volume() << endl;
         
-        // Section 5B - Create TankCar Object and Assign values to its member 
+        // Section 4B - Create TankCar Object and Assign values to its member 
         // variable
         
         cout << "Please Enter the Radius and Length of the Tank Car." << endl;
         cin >> radius >> lengthOfTankCar;  
         
-        // Section 6B - Calling Member Function volume to calculate the Volume of 
+        // Creating myTankCar object for user defined class TankCar. Once TankCar
+        // Object is created, corresponding memory for the member variable is 
+        // created and can be accessed using the myTankCar object.         
+        TankCar myTankCar;
+
+        // Assigning values to the Objects Member Variable
+        myTankCar.mLength = lengthOfTankCar; 
+        myTankCar.mRadius = radius; 
+
+        // Section 5B - Calling Member Function volume to calculate the Volume of 
         // TankCar Object
-        
-        // Display the Result
+        cout << "The Volume of the Tan Car Object of lth: " << myTankCar.mLength 
+             << " And Rad: " << myTankCar.mRadius << " is " << myTankCar.volume()
+             << endl;
+    
+        // Memory Size of Box Car and Tank Car Class
+        cout << "Memory of BoxCar Class = " << sizeof(BoxCar) << endl;
+        cout << "Memory of TankCar Class = " << sizeof(TankCar) << endl;        
     }
 
 

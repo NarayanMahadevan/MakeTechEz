@@ -8,21 +8,33 @@
 
 #import "Dog.h"
 
+// Optional Section A1: Implementation Variable - Local to the
+// implementation file is defined here
+
+// The vairables are declared static only one instance object needs
+// to be created across all Dog Objects
+static NSDictionary *_DogTemperament;
+static NSDictionary *_DogAggression;
+static NSDictionary *_DogIntelligence;
+static BOOL _IsStaticVarInit = false;
+
 @implementation Dog {
-    // Section F: Instance Variable available only the implementation file is defined here
-    static NSDictionary *_DogTemperament;
-    static NSDictionary *_DogAggression;
-    static NSDictionary *_DogIntelligence;
-    static Bool _IsStaticVarInit = false;
+    // Optional Section A2: Implementation Variable - Instance Variable
+    // available only to this implementation file is defined here
+    // This variable maintains Dog Objects temperament, aggression and intelligence
+    NSString *mTemperament;
+    NSString *mAggression;
+    NSString *mIntelligence;
 }
 
-// Section A: @synthesize directive
+// Section B: @synthesize directive
 @synthesize name = mName;
 @synthesize breed = mBreed;
 @synthesize color = mColor;
 @synthesize age = mAge;
+@synthesize isPoliceDog = mIsPoliceDog;
 
-// Section B: Accessor Methods are implemented here
+// Section C: Accessor Methods are implemented here
 
 // getter methods
 - (NSString*) name {
@@ -50,7 +62,7 @@
     mColor = aColor;
 }
 
-// Section C: Class Method to Initialize (init) is implemented here
+// Section D: Class Method to Initialize (init) is implemented here
 
 +(id)alocAndInitName:(NSString*)aName Breed:(NSString*)aBreed Color:(NSString*)aColor
               AndAge:(NSNumber*)aAge
@@ -59,7 +71,7 @@
     return [myDog initName:aName Breed:aBreed Color:aColor AndAge:aAge];
 }
 
-// Section D: Instance Method to Initialize (init) is implemented here
+// Section E: Instance Method to Initialize (init) is implemented here
 
 // This method is over written from the super class.
 // Since all the properties are using @synthesize directive, this init method is called
@@ -67,39 +79,41 @@
 
 -(id)init {
     self = [super init];
-    // Checks if the static variables are already initialized. If not then
-    // the memory is allocated and initialized.
-    if (self && !_IsStaticVarInit) {
+    // By default all dogs are not Police Dog
+    mIsPoliceDog = false;
+    if (self) {
         initStaticVars();
     }
     return self;
 }
 
-// This method is defined in the implementation file and its purpose is to
+// This method is local to the implementation file and its purpose is to
 // allocate memory and initialize the static variables
-+ (void) initStaticVars() {
+void initStaticVars() {
     
+    // Checks if the static variables are already initialized. If not then
+    // the memory is allocated and initialized.
     if (_IsStaticVarInit) return;
     
-    // Set the values for the local instance variable
+    // Set the values for the local static variable
     _DogTemperament = [[NSDictionary alloc] initWithObjectsAndKeys:
-                       @" Dogs are fearless, and willing to defend",
+                       @"Fearless, and willing to defend",
                        @"Doberman",
-                       @" Dogs are active and have willingness to learn",
+                       @"Active and willingness to learn",
                        @"German Shepherd",
                        nil];
     
     _DogAggression = [[NSDictionary alloc] initWithObjectsAndKeys:
-                      @" Dogs are extremely high on stranger-directed aggression",
+                      @"Extremely high on stranger-directed aggression",
                       @"Doberman",
-                      @" Dogs have a reputation as being very safe",
+                      @"Being very safe",
                       @"German Shepherd",
                       nil];
     
     _DogIntelligence = [[NSDictionary alloc] initWithObjectsAndKeys:
-                        @" Dogs are ranked the 5th most intelligent dog",
+                        @"Ranked 5th most intelligent dog",
                         @"Doberman",
-                        @" Dogs are ranked the 3rd most intelligent dog",
+                        @"Ranked 3rd most intelligent dog",
                         @"German Shepherd",
                         nil];
     _IsStaticVarInit = true;
@@ -116,24 +130,35 @@
     return self;
 }
 
-// Section E: Instance Method to describe Dogs Behaviour is implemented here
+// Section F: Instance Method to describe Dogs Behaviour is implemented here
 
 -(void) temperament {
-    NSString* resText = [mBreed stringByAppendingString:
-                                [_DogTemperament objectForKey:mBreed]];
-    NSLog(@"Temperament of %@", resText);
+    if (mTemperament == NULL)
+        mTemperament = [_DogTemperament objectForKey:mBreed];
+    NSLog(@"Temperament of my %@ the %@ Dog is %@", mName, mBreed,
+          mTemperament);
 }
 
 -(void) aggression {
-    NSString* resText = [mBreed stringByAppendingString:
-                         [_DogAggression objectForKey:mBreed]];
-    NSLog(@"Temperament of %@", resText);
+    if (mAggression == NULL)
+        mAggression = [_DogAggression objectForKey:mBreed];
+    NSLog(@"Aggression of my %@ the %@ Dog is %@", mName, mBreed,
+          mAggression);
 }
 
 -(void) intelligence {
-    NSString* resText = [mBreed stringByAppendingString:
-                         [_DogIntelligence objectForKey:mBreed]];
-    NSLog(@"Intelligence: %@", resText);
+    if (mIntelligence == NULL)
+        mIntelligence = [_DogIntelligence objectForKey:mBreed];
+    NSLog(@"Intelligence of my %@ the %@ Dog is %@", mName, mBreed,
+          mIntelligence);
+}
+
+// This method is over-written from NSObject and Returns a string that
+// represents the contents of the receiving class.
+- (NSString *)description {
+    return [NSString stringWithFormat:
+            @"My Dogs name is %@, Breed is %@, and Color is %@",
+            mName, mBreed, mColor];
 }
 
 @end

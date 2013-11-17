@@ -10,6 +10,7 @@
 		8B001D7D17D97D4500F95A0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B001D7C17D97D4500F95A0D /* Foundation.framework */; };
 		8B001D8017D97D4500F95A0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B001D7F17D97D4500F95A0D /* main.m */; };
 		8B001D8417D97D4500F95A0D /* MyDog.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8B001D8317D97D4500F95A0D /* MyDog.1 */; };
+		8B68E40E17EFE3BB006F4E06 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B001D9217DAD5EF00F95A0D /* Dog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -143,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B68E40E17EFE3BB006F4E06 /* Dog.m in Sources */,
 				8B001D8017D97D4500F95A0D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +248,7 @@
 				8B001D8917D97D4500F95A0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
