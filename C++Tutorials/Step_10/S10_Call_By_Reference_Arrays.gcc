@@ -1,0 +1,26 @@
+//
+//  Program Name - S10_Call_By_Reference_Arrays.cpp
+//  Series: GetOnToC++ Step: 10
+//
+//  Purpose: This program shows how to use call by reference with arrays
+//  Compile: g++ S10_Call_By_Reference_Arrays.cpp -o S10_Call_By_Reference_Arrays
+//  Execute: ./S10_Call_By_Reference_Arrays
+//
+//  Created by Narayan Mahadevan on 18/08/13.
+//  
+#include <iostream>
+using namespace std;
+
+void sum(int* array, int length){
+  int sum;
+  for(int x = 0; x< length; x++){
+    sum+= array[x];
+  }
+  return sum;
+}
+
+int main(){
+        int temp_array[3] = {1,2,3}
+        sum(temp_array, 3);
+        cout << sum << endl;
+}

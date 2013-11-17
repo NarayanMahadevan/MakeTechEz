@@ -1,0 +1,10 @@
+Section 1:Virtual member functions
+  Explains how using inheritance can be used to create an array with differnt types of classes in it
+  Exaplin how virtual member functions force subclasses to have these functions
+Section 2:Switch statements
+  Explain the generic form of switch statments and their uses. In the program, the numbers are switched with the enumerated types
+  so a generic example in the tutorial would be useful
+Section 3:Enumerated Types
+  Side Step:S8_Enumerated_Types
+  Explain the uses of enumerated types in makeing the program more readible. THe side step explains how the values of the 
+  enum variables are set. The next is always one more then the value of the previous. 

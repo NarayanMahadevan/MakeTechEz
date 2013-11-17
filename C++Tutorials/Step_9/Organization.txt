@@ -1,0 +1,7 @@
+Section 1:Constructors that use other constructors
+  Side Step:Constructors.cpp
+Section 2:Member functions that use other member functions
+Sections 3:Private and Protected Constructors
+  Side Step: Protected_constructor
+  Side Step: Private_constructor
+Sections 4:Using private and protected functions
