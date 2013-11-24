@@ -42,11 +42,11 @@
     }//endmain
 
 
+    // summarize results of 6,000,000 rolls of a die
     void summarize(void) 
     {
         int face; // stores most recently rolled value
 
-        // summarize results of 6,000,000 rolls of a die
         for ( int roll = 1; roll <= 6000000; ++roll )
         {
             face = 1 + rand()%6; //randomnumberfrom1to6
