@@ -1,6 +1,6 @@
     //
     //  Program Name - S5_SP_PointerDemo.cpp
-    //  Series: GetOnToC++ Step: 4 Side Program
+    //  Series: GetOnToC++ Step: 5 Side Program
     //
     //  Purpose: This program demonstrates & and * pointer operators.
     //
