@@ -49,7 +49,7 @@ Before you start programming in C++, it is important you have the environment to
 <a name="editor"/></a>
 ###Text Editor
 </br>
-This will be used to type your program. Examples of few editors include Windows Notepad, OS Edit command, Brief, Epsilon, EMACS, and vim or vi. 
+This will be used to type your program. Examples of few editors include Windows Notepad, Notepad++, OS Edit command, Brief, Epsilon, EMACS, and vim or vi. 
 
 Our recomendation is [**gedit**](https://projects.gnome.org/gedit/) from GNOME. Its a free software. Linux fans will already be familiar with the world of GNOME but gedit has brought it to a wider audience by providing the default GNOME editor on Windows and Mac. This can be **downloaded** from <http://gedit.en.softonic.com>. The advantages are:
 
@@ -84,9 +84,21 @@ The article [How To Install Gcc Compiler On Mac OS X](http://www.mkyong.com/mac/
 
 #####Windows Installation
 
-To install GCC for Windows install [**MinGW**](http://www.mingw.org), and follow the link to the MinGW download page. Download the latest version of the MinGW installation program.
+The easiest way to create an compile programs on Windows is through the use of a IDE or integrated Development Enviorment. A simple one to set up is Dev-C++.
 
-While installing MinWG, at a minimum, install gcc-core, gcc-g++, binutils, and the MinGW runtime. Then add the bin subdirectory of MinGW installation to PATH environment variable so that gcc, g++, etc compiler can be run from the Windows command line.
+Download and run the installer availbe at http://orwelldevcpp.blogspot.com. The defualt options are fine. 
+
+By defualt, Dev-C++ does not support the most recent version of C++.
+Click on Tools->Compiler Options
+Select the "Settings" tab and within it, the "Code Generation" tab. 
+In 'Language standard (-std) select "ISO C++ 11".
+Compiling in C++ 11 is now enabled
+
+To compile and run a simple program, it is as simple as 
+File -> New -> Source File
+Write the program
+Then File -> Save As ...
+Finally press F11 to compile and run the program
 
 <a name="c++_overview"/></a>
 ## Overview of C++
