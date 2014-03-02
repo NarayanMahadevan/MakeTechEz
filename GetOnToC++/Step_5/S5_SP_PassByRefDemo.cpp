@@ -5,8 +5,11 @@
     //  Purpose: This program demonstrates passing arguments to a function using
     //           pass-by-value and pass-by-reference
     //
-    //  Compile: g++ S5_SP_PassByRefDemo.cpp -o S5_SP_PassByRefDemo
-    //  Execute: ./S5_SP_PassByRefDemo
+    //  Compile: g++ S5_SP_PassByRefDemo.cpp -o exe/S5_SP_PassByRefDemo
+    //  Execute: exe/S5_SP_PassByRefDemo
+    //
+    //
+    //  Online Execution: http://ideone.com/C3vEU8
     //
     //  Created by Narayan Mahadevan on 18/08/13.
     //  Copyright (c) 2013 MakeTechEz. All rights reserved.
@@ -22,10 +25,10 @@
     int cubeByValue( int ); 
 
     // This function demonstrates passing variable by reference
-    void cubeByReference( int * );
+    int * cubeByReference( int *, int );
 
     // This function demonstrates important rule of passing variable by reference
-    void passByReferenceTest( int * );
+    int * passByReferenceTest( int * );
 
     int main()
     {
@@ -34,33 +37,30 @@
              << "\nAnd Memory Address: " << &number << endl;
 
         // Pass number by value to cubeByValue
-        number = cubeByValue( number ); 
-        cout << "\nThe new value of number is " << number 
-             << "\nAnd Memory Address: " << &number << endl;
+        int cubeVal = cubeByValue( number ); 
+        cout << "\nThe cube value is " << cubeVal << endl;
 
-        // Resetting the number back to 5
-        number = 5;
-
-        // Pass number address to cubeByReference        
-        cubeByReference( &number ); 
-        cout << "\nThe new value of number is " << number
-             << "\nAnd Memory Address: " << &number << endl;
-
+        // Pass number address to cubeByReference 
+        int * cubeRefVal = &cubeVal; number = 10;
+        cubeByReference( &cubeVal, number ); 
+        cout << "\nThe cube value of number is " << *cubeRefVal
+             << "\nAnd Memory Address: " << cubeRefVal << endl;
+        
         // Passing By Reference Test
         cout << "\nPassing By Reference Test" 
              << "\n-------------------------" << endl;
 
         int y = 10, *yPtr = &y;
-        cout << "\nThe updated value of y is: " << y 
+        cout << "\nThe value of y is: " << y 
              << " And Memory Address is: " << &y
              << "\nThe value of yPtr is: " << *yPtr 
              << " And Memory Address is: " << yPtr << endl;
 
         passByReferenceTest(yPtr);
 
-        cout << "\nThe value of y is: " << y 
+        cout << "\nThe updated value of y is: " << y 
              << " And Memory Address is: " << &y
-             << "\nThe value of yPtr is: " << *yPtr 
+             << "\nThe updated value of yPtr is: " << *yPtr 
              << " And Memory Address is: " << yPtr << endl;
     } //end main
 
@@ -72,19 +72,22 @@
              << "\n----------------------------------" 
              << "\nThe value of n passed by value is " 
              << n << "\nAnd Memory Address: " << &n << endl;
-
-        return n * n * n; // cube local variable n and return result
+        int * cubeVal = &n;
+        *cubeVal = n * n * n;
+        return *cubeVal; // cube local variable n and return result
     } // end function cubeByValue
 
     // This function demonstrates passing variable by reference
-    // calculate cube of *nPtr; modifies variable number in main
-    void cubeByReference( int *nPtr )
+    // to calculate cube; 
+    int * cubeByReference( int *cubeVal, int val )
     {
-        cout << "\nIn cubeByReference( int *nPtr ) function: "
+        cout << "\nIn cubeByReference( int *cubeVal, int val ) function: "
              << "\n-------------------------------------------" 
-             << "\nThe value of nPtr passed by reference is " << *nPtr 
-             << "\nAnd Memory Address: " << nPtr << endl;
-        *nPtr = *nPtr * *nPtr * *nPtr; // cube *nPtr
+             << "\nThe value is " << val 
+             << "\nAnd Memory Address: " << cubeVal << endl;
+        *cubeVal = val * val * val; // cube val
+        cout << "Cube Value: " << *cubeVal << endl;
+        return cubeVal;
     } // end function cubeByReference
 
     // This function demonstrates important rule of passing variable by reference
@@ -95,7 +98,7 @@
     // Notice 2: xPtr points to the same memory location as yPtr. xPtr can 
     //           legally point to new Memory address but will not affect the yPtr
     //
-    void passByReferenceTest( int *xPtr ) 
+    int * passByReferenceTest( int *xPtr ) 
     {
         cout << "\nIn Function passByReferenceTest(): "
              << "\n----------------------------------" 
@@ -113,49 +116,50 @@
         cout << "The value of updated xPtr is " << *xPtr 
              << " And Memory Address is: " << xPtr << endl;
 
+        return xPtr;
+
     } // end function passByReferenceTest
 
 
 
-/********************************************************************
+    /********************************************************************
 
-RESULT:
+    RESULT:
 
-    ./S5_SP_PassByRefDemo
+    exe/S5_SP_PassByRefDemo
     The original value of number is 5
-    And Memory Address: 0x7fff5e599b04
+    And Memory Address: 0x7fff50ff8af4
 
     In cubeByValue( int n ) function:
     ----------------------------------
     The value of n passed by value is 5
-    And Memory Address: 0x7fff5e599a7c
+    And Memory Address: 0x7fff50ff8a6c
 
-    The new value of number is 125
-    And Memory Address: 0x7fff5e599b04
+    The cube value is 125
 
-    In cubeByReference( int *nPtr ) function: 
+    In cubeByReference( int *cubeVal, int val ) function: 
     -------------------------------------------
-    The value of nPtr passed by reference is 5
-    And Memory Address: 0x7fff5e599b04
+    The value is 5
+    And Memory Address: 0x7fff50ff8af0
 
-    The new value of number is 125
-    And Memory Address: 0x7fff5e599b04
+    The cube value of number is 125
+    And Memory Address: 0x7fff50ff8af0
 
     Passing By Reference Test
     -------------------------
 
-    The updated value of y is: 10 And Memory Address is: 0x7fff5e599b00
-    The value of yPtr is: 10 And Memory Address is: 0x7fff5e599b00
+    The updated value of y is: 10 And Memory Address is: 0x7fff50ff8ae4
+    The value of yPtr is: 10 And Memory Address is: 0x7fff50ff8ae4
 
     In Function passByReferenceTest(): 
     ----------------------------------
-    The value of xPtr is 10 And Memory Address is: 0x7fff5e599b00
-    The updated value of xPtr is 50 And Memory Address is: 0x7fff5e599b00
-    The value of updated xPtr is 100 And Memory Address is: 0x7fff5e599a74
+    The value of xPtr is 10 And Memory Address is: 0x7fff50ff8ae4
+    The updated value of xPtr is 50 And Memory Address is: 0x7fff50ff8ae4
+    The value of updated xPtr is 100 And Memory Address is: 0x7fff50ff8a54
 
-    The value of y is: 50 And Memory Address is: 0x7fff5e599b00
-    The value of yPtr is: 50 And Memory Address is: 0x7fff5e599b00
+    The value of y is: 50 And Memory Address is: 0x7fff50ff8ae4
+    The value of yPtr is: 50 And Memory Address is: 0x7fff50ff8ae4
 
-********************************************************************/
+    ********************************************************************/
 
 

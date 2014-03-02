@@ -4,8 +4,8 @@
     //
     //  Purpose: This program demonstrates const pointers
     //
-    //  Compile: g++ S5_SP_ConstPointers.cpp -o S5_SP_ConstPointers
-    //  Execute: ./S5_SP_ConstPointers
+    //  Compile: g++ S5_SP_ConstPointers.cpp -o exe/S5_SP_ConstPointers
+    //  Execute: exe/S5_SP_ConstPointers
     //
     //  Created by Narayan Mahadevan on 18/08/13.
     //  Copyright (c) 2013 MakeTechEz. All rights reserved.
@@ -19,13 +19,15 @@
     void f1( int * ); 
 
     // This function demonstrates Nonconstant Pointer to Constant Data
-    void f2( const int * ); 
+    void modifyPtr2ConstData( const int * ); 
 
     int main()
     {
         int x = 25, y = 10, *yPtr = &y;
         cout << "The original value of y is: " << y 
              << " And Memory Address is: " << &y
+             << "\nThe value of x is: " << x 
+             << " And Memory Address is: " << &x 
              << "\nThe value of yPtr is: " << *yPtr 
              << " And Memory Address is: " << yPtr << endl;
 
@@ -33,7 +35,16 @@
         cout << "\nDemonstrating Nonconstant Pointer to Nonconstant Data";
         cout << "\n------------------------------------------------------";
 
-        f1( yPtr );
+        //f1( yPtr );
+		// Modify the data of yPtr using de-referenced pointer
+        *yPtr = 100;
+
+        cout << "\nThe value of y is " << y << " And Memory Address: " << &y
+             << "\nThe value of yPtr is " << *yPtr 
+             << " And Memory Address: " << yPtr << endl;
+        
+        // Modify the yPtr to point to x 
+        yPtr = &x;
 
         cout << "\nThe value of y is " << y << " And Memory Address: " << &y
              << "\nThe value of yPtr is " << *yPtr 
@@ -45,30 +56,65 @@
         // Passing Nonconstant Pointer to a function that takes Constant Data 
         cout << "\nDemonstrating Nonconstant Pointer to Constant Data";
         cout << "\n------------------------------------------------------";
-        f2( yPtr );
 
-        cout << "\nThe value of y is: " << y << " And Memory Address is: " << &y 
+        //modifyPtr2ConstData( yPtr );
+        // Define xPtr variable which is Pointer to constant Data
+        const int * xPtr = 0;
+        
+        // Assign xPtr to point to yPtr
+        xPtr = yPtr;        
+
+        cout << " \nAfter assignment of xPtr to point to yPtr ---------------" 
+             << "\nThe value of y is: " << y << " And Memory Address is: " << &y 
              << "\nThe value of yPtr is: " << *yPtr 
-             << " And Memory Address is: " << yPtr << endl;
+             << " And Memory Address is: " << yPtr 
+             << "\nThe value of xPtr is: " << *xPtr 
+             << " And Memory Address is: " << xPtr << endl;
+
+        // Assign xPtr to point to y
+        xPtr = &y;        
+
+        cout << " \nAfter assignment of xPtr to point to y ------------------" 
+             << "\nThe value of y is: " << y 
+             << " And Memory Address is: " << &y 
+             << "\nThe value of yPtr is: " << *yPtr 
+             << " And Memory Address is: " << yPtr 
+             << "\nThe value of xPtr is: " << *xPtr 
+             << " And Memory Address is: " << xPtr << endl;
 
         // Attempting to modify a constant pointer to nonconstant data.
         cout << "\nDemonstrating Constant Pointer to Nonconstant Data";
         cout << "\n------------------------------------------------------";
 
-        // ptr is a constant pointer to an integer that can be modified through
-        // ptr, but ptr always points to the same memory location.
-        int * const ptr = &y; // const pointer must be initialized
-        cout << "\nThe value of y is: " << y << " And Memory Address is: " << &y 
-             << "\nThe value of ptr is: " << *ptr 
-             << " And Memory Address is: " << ptr << endl;
+        // Note in case of Constant Pointer to an integer, the integer value can 
+        // be modified bur the Pointer's memory location cannot be changed
 
-        // Attempting to modify a constant pointer to constant data.
-        *ptr = 100; // allowed: *ptr is not const and data can be changed
-        cout << "\nThe value of y is: " << y << " And Memory Address is: " << &y 
-             << "\nThe UPDATED value of ptr is: " << *ptr 
-             << " And Memory Address is: " << ptr << endl;
+        // Specify a constPtr variable which is a Constant Pointer to an Integer
+        // Initialize to point to yPtr
+        // Modification Code # 1
+        int * const constPtr = yPtr; // const pointer must be initialized
+        
+        cout << " \nAfter Initialization of constPtr ---------------" 
+             << "\nThe value of yPtr is: " << *yPtr 
+             << " And Memory Address is: " << yPtr; 
+             
+        cout << "\nThe value of constPtr is: " << *constPtr 
+             << " And Memory Address is: " << constPtr << endl;
 
-        // ptr = &x; // error: ptr is const; cannot assign to it a new address
+        // Assign value of x to constPtr
+        // Modification Code # 2
+        *constPtr = x; // allowed: *constPtr is not const and data can be changed
+
+        cout << " \nAfter assignment of x to constPtr ---------------" 
+             << "\nThe value of yPtr is: " << *yPtr 
+             << " And Memory Address is: " << yPtr; 
+             
+        cout << "\nThe value of constPtr is: " << *constPtr 
+             << " And Memory Address is: " << constPtr << endl;
+
+		// Modify constPtr to point to variable x
+        // Modification Code # 3
+        // constPtr = &x; // error: ptr is const; cannot assign to it a new address
 
         // ptr is a constant pointer to a constant integer.
         cout << "\nDemonstrating Constant Pointer to Constant Data";
@@ -77,12 +123,13 @@
         // xptr always points to the same location; the integer
         // at that location cannot be modified.
         const int *const xptr = &x;
+        
         cout << "\nThe value of x is: " << x << " And Memory Address is: " << &x 
              << "\nThe value of xptr is: " << *xptr 
              << " And Memory Address is: " << xptr << endl;
-
-    ￼￼￼￼// *xptr = 7; // error: *xptr is const; cannot assign new value
-    ￼￼￼￼// xptr = &y; // error: xptr is const; cannot assign new address
+        
+        // error: *xptr is const; cannot assign new value => *xptr = 7; 
+        // error: xptr is const; cannot assign new address => xptr = &y; 
         
     } // end main
 
@@ -127,10 +174,10 @@
     // Notice 3: Pointer reference can be chaged because as per the declaration
     //           const int * the data is Constant but the pointer is Nonconstant 
     //
-    void f2( const int *xPtr ) 
+    void modifyPtr2ConstData( const int *xPtr ) 
     {
         int b = 100;
-        cout << "\nIn Function f2():"
+        cout << "\nIn Function modifyPtr2ConstData():"
              << "\n-----------------" 
              << "\nThe value of xPtr is " << *xPtr 
              << " And Memory Address is: " << xPtr << endl;
@@ -149,19 +196,17 @@
 RESULT:
 
     $ ./S5_SP_ConstPointers
-    The original value of y is: 10 And Memory Address is: 0x7fff5f43db00
-    The value of yPtr is: 10 And Memory Address is: 0x7fff5f43db00
+    The original value of y is: 10 And Memory Address is: 0x7fff54e46af0
+    The value of x is: 25 And Memory Address is: 0x7fff54e46af4
+    The value of yPtr is: 10 And Memory Address is: 0x7fff54e46af0
 
     Demonstrating Nonconstant Pointer to Nonconstant Data
     ------------------------------------------------------
-    In Function f1(): 
-    -----------------
-    The value of xPtr is 10 And Memory Address is: 0x7fff5f43db00
-    The UPDATED value of xPtr is 50 And Memory Address is: 0x7fff5f43db00
-    The value of xPtr is 100 And UPDATED Memory Address is: 0x7fff5f43da44
+    The value of y is 10 And Memory Address: 0x7fff54e46af0
+    The value of yPtr is 10 And Memory Address: 0x7fff54e46af0
 
-    The value of y is 50 And Memory Address: 0x7fff5f43db00
-    The value of yPtr is 50 And Memory Address: 0x7fff5f43db00
+    The value of y is 10 And Memory Address: 0x7fff54e46af0
+    The value of yPtr is 10 And Memory Address: 0x7fff54e46af0
 
     Demonstrating Nonconstant Pointer to Constant Data
     ------------------------------------------------------
